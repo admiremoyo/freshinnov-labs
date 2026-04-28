@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Management System — Zimbabwe Schools Software | Freshinnov Labs</title>
+  <meta name="description" content="Manage students, fees, and reports from one dashboard. Affordable school management software built for Zimbabwe schools, colleges, and training institutions."/>
+  <meta name="keywords" content="school management system Zimbabwe, school software Zimbabwe, student management system, fee management school Zimbabwe, school administration software"/>
+  <meta property="og:title" content="School Management System | Freshinnov Labs Zimbabwe"/>
+  <meta property="og:description" content="Manage students, fees, timetables, and reports from one dashboard. Built for Zimbabwe schools. Affordable and easy to use."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav class="nav-inner container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../logo.png" alt="Freshinnov Labs" class="nav-logo-img"/>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#services" class="nav-link">Services</a>
+        <a href="../apps.html" class="nav-link active">Apps</a>
+        <a href="../index.html#work" class="nav-link">Portfolio</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="nav-link nav-wa">
+          <svg viewBox="0 0 24 24" width="14" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="../index.html#contact" class="nav-cta magnetic">
+          <span>Start a Project</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="../index.html#services" class="mob-link">Services</a>
+      <a href="../apps.html" class="mob-link">Apps</a>
+      <a href="../index.html#work" class="mob-link">Portfolio</a>
+      <a href="../index.html#about" class="mob-link">About</a>
+      <a href="../index.html#contact" class="mob-link">Contact</a>
+      <a href="https://wa.me/263775364959" target="_blank" class="mob-cta">💬 WhatsApp Us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="iapp-hero">
+    <div class="iapp-hero-glow-1" style="background:radial-gradient(circle,rgba(139,92,246,.18),transparent 70%)"></div>
+    <div class="iapp-hero-glow-2" style="background:radial-gradient(circle,rgba(167,139,250,.12),transparent 70%)"></div>
+    <div class="container">
+      <div class="iapp-hero-inner">
+        <div class="iapp-hero-left">
+          <a href="../apps.html" class="iapp-hero-back">
+            <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 8H3M7 4l-4 4 4 4"/></svg>
+            All Apps
+          </a>
+          <div class="iapp-hero-tag reveal-up" style="--delay:.1s">Education Management · Android &amp; Web App</div>
+          <h1 class="reveal-up" style="--delay:.2s">School <em>Management</em> System</h1>
+          <p class="iapp-hero-desc reveal-up" style="--delay:.3s">Manage students, fees, timetables, and reports from one dashboard. Built specifically for Zimbabwe schools — affordable, practical, and easy to use without any technical knowledge. Reduce admin work and focus on what matters: education.</p>
+          <div class="iapp-hero-actions reveal-up" style="--delay:.4s">
+            <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20to%20set%20up%20School%20Management%20System" target="_blank" rel="noopener" class="btn-primary magnetic">
+              <span>Start Using This App</span>
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              <div class="btn-shine"></div>
+            </a>
+            <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20a%20demo%20of%20School%20Management%20System" target="_blank" rel="noopener" class="btn-ghost">Request a Demo</a>
+          </div>
+        </div>
+        <div class="iapp-hero-right reveal-up" style="--delay:.25s">
+          <div class="iapp-phone-wrap">
+            <div class="iapp-phone-glow" style="background:radial-gradient(circle,rgba(139,92,246,.2),transparent 70%)"></div>
+            <div class="iapp-phone">
+              <div class="iapp-phone-notch"></div>
+              <div class="iapp-screen">
+                <div style="height:100%;display:flex;flex-direction:column;background:#07101e">
+                  <div style="background:linear-gradient(135deg,#07101e,#0f2040);padding:18px 16px 14px;border-bottom:1px solid rgba(255,255,255,.05)">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                      <div style="font-size:14px;font-weight:800;color:white">School Manager</div>
+                      <div style="font-size:13px">🎓</div>
+                    </div>
+                    <div style="font-size:9px;color:rgba(255,255,255,.4);margin-top:4px">Harare Academy · Term 2 2026</div>
+                  </div>
+                  <div style="padding:12px;display:flex;flex-direction:column;gap:7px;flex:1;overflow:hidden">
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px">
+                      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:9px 5px;text-align:center"><div style="font-size:16px;font-weight:800;color:#22d3ee;font-family:'Cormorant Garamond',serif">342</div><div style="font-size:7px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.3px">Students</div></div>
+                      <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:9px 5px;text-align:center"><div style="font-size:16px;font-weight:800;color:#22d3ee;font-family:'Cormorant Garamond',serif">18</div><div style="font-size:7px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.3px">Classes</div></div>
+                      <div style="background:rgba(16,232,122,.08);border:1px solid rgba(16,232,122,.15);border-radius:10px;padding:9px 5px;text-align:center"><div style="font-size:16px;font-weight:800;color:#10e87a;font-family:'Cormorant Garamond',serif">94%</div><div style="font-size:7px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.3px">Fees Paid</div></div>
+                    </div>
+                    <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.5px">Quick Access</div>
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px"><span style="font-size:15px">📚</span><span style="font-size:11px;color:rgba(255,255,255,.8);font-weight:600;flex:1">Student Records</span><span style="color:rgba(255,255,255,.25);font-size:12px">›</span></div>
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px"><span style="font-size:15px">💰</span><span style="font-size:11px;color:rgba(255,255,255,.8);font-weight:600;flex:1">Fee Management</span><span style="color:rgba(255,255,255,.25);font-size:12px">›</span></div>
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px"><span style="font-size:15px">📊</span><span style="font-size:11px;color:rgba(255,255,255,.8);font-weight:600;flex:1">Generate Reports</span><span style="color:rgba(255,255,255,.25);font-size:12px">›</span></div>
+                    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px"><span style="font-size:15px">📅</span><span style="font-size:11px;color:rgba(255,255,255,.8);font-weight:600;flex:1">Timetable</span><span style="color:rgba(255,255,255,.25);font-size:12px">›</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Target Users</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Who This App<br/><em>Is For</em></h2>
+      </div>
+      <div class="iapp-who-grid">
+        <div class="iapp-who-card scroll-reveal" style="--sd:0s">
+          <div class="iapp-who-icon">🏫</div>
+          <div class="iapp-who-label">Primary &amp; Secondary Schools</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.08s">
+          <div class="iapp-who-icon">🎓</div>
+          <div class="iapp-who-label">Colleges &amp; Universities</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.16s">
+          <div class="iapp-who-icon">📖</div>
+          <div class="iapp-who-label">Tutoring Centres</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.24s">
+          <div class="iapp-who-icon">🏢</div>
+          <div class="iapp-who-label">Training Institutions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="iapp-section">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Features</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Everything Your School<br/><em>Needs to Run Smoothly</em></h2>
+      </div>
+      <div class="iapp-features-grid">
+        <div class="iapp-feat scroll-reveal" style="--sd:0s">
+          <div class="iapp-feat-icon">👤</div>
+          <div class="iapp-feat-body">
+            <h4>Student Registration &amp; Profiles</h4>
+            <p>Register students with full profiles including personal details, parent contacts, class assignment, and admission date. Search and filter students instantly.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.08s">
+          <div class="iapp-feat-icon">💰</div>
+          <div class="iapp-feat-body">
+            <h4>Fee Management &amp; Payment Tracking</h4>
+            <p>Record fee payments, track balances, and see which students are outstanding at a glance. Generate fee statements and payment receipts automatically.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.16s">
+          <div class="iapp-feat-icon">📊</div>
+          <div class="iapp-feat-body">
+            <h4>Generate Reports &amp; Transcripts</h4>
+            <p>Generate student report cards, end-of-term reports, and academic transcripts automatically. Professional, branded documents ready to print or share.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.24s">
+          <div class="iapp-feat-icon">📅</div>
+          <div class="iapp-feat-body">
+            <h4>Class Scheduling &amp; Timetables</h4>
+            <p>Create and manage class timetables easily. Assign teachers to classes, manage subject allocations, and prevent scheduling conflicts automatically.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.32s">
+          <div class="iapp-feat-icon">✅</div>
+          <div class="iapp-feat-body">
+            <h4>Attendance Tracking</h4>
+            <p>Record daily attendance for each class. View attendance history for any student, generate attendance reports, and identify students who need follow-up.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.4s">
+          <div class="iapp-feat-icon">👨‍🏫</div>
+          <div class="iapp-feat-body">
+            <h4>Teacher &amp; Staff Management</h4>
+            <p>Manage teacher profiles, subject assignments, and class allocations. Track staff information and generate teacher-specific reports with ease.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header" style="text-align:center">
+        <div class="section-kicker scroll-reveal">App Preview</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">See It in<br/><em>Action</em></h2>
+      </div>
+      <div class="iapp-screenshots scroll-reveal" style="--sd:.1s">
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:linear-gradient(135deg,#07101e,#0f2040);padding:14px;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:10px;font-weight:800;color:white">Dashboard</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">
+              <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:9px;text-align:center"><div style="font-size:16px;font-weight:800;color:#22d3ee;font-family:'Cormorant Garamond',serif">342</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Students</div></div>
+              <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:9px;text-align:center"><div style="font-size:16px;font-weight:800;color:#22d3ee;font-family:'Cormorant Garamond',serif">28</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Teachers</div></div>
+              <div style="background:rgba(16,232,122,.08);border-radius:10px;padding:9px;text-align:center"><div style="font-size:16px;font-weight:800;color:#10e87a;font-family:'Cormorant Garamond',serif">94%</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Fees Paid</div></div>
+              <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:9px;text-align:center"><div style="font-size:16px;font-weight:800;color:#22d3ee;font-family:'Cormorant Garamond',serif">18</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Classes</div></div>
+            </div>
+          </div>
+          <div class="iapp-shot-label">Main Dashboard</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:#07101e;padding:14px;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:10px;font-weight:800;color:white">Fee Records</div>
+            <div style="background:rgba(16,232,122,.08);border:1px solid rgba(16,232,122,.15);border-radius:8px;padding:8px;display:flex;justify-content:space-between;font-size:9px"><span style="color:rgba(255,255,255,.6)">Collected (Term 2)</span><span style="color:#10e87a;font-weight:800">$24,800</span></div>
+            <div style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.15);border-radius:8px;padding:8px;display:flex;justify-content:space-between;font-size:9px"><span style="color:rgba(255,255,255,.6)">Outstanding</span><span style="color:#f59e0b;font-weight:800">$1,560</span></div>
+            <div style="font-size:9px;color:rgba(255,255,255,.4);margin-top:4px">Recent Payments</div>
+            <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>Chipo M. · Form 3A</span><span style="color:#10e87a">$120 ✓</span></div>
+            <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>Farai N. · Form 1B</span><span style="color:#10e87a">$120 ✓</span></div>
+          </div>
+          <div class="iapp-shot-label">Fee Management</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:#07101e;padding:14px;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:10px;font-weight:800;color:white">Student Profile</div>
+            <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:10px;text-align:center">
+              <div style="width:32px;height:32px;background:rgba(34,211,238,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;font-size:16px">👤</div>
+              <div style="font-size:11px;font-weight:800;color:white">Chipo Mupfumi</div>
+              <div style="font-size:9px;color:rgba(255,255,255,.4)">REG: 2024/0142 · Form 3A</div>
+            </div>
+            <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:8px">
+              <div style="font-size:8px;color:rgba(255,255,255,.4);margin-bottom:4px">FEE STATUS</div>
+              <div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:rgba(255,255,255,.7)">Balance</span><span style="color:#10e87a;font-weight:800">PAID IN FULL</span></div>
+            </div>
+            <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:8px">
+              <div style="font-size:8px;color:rgba(255,255,255,.4);margin-bottom:4px">ATTENDANCE</div>
+              <div style="display:flex;justify-content:space-between;font-size:9px"><span style="color:rgba(255,255,255,.7)">This Term</span><span style="color:#10e87a;font-weight:700">97%</span></div>
+            </div>
+          </div>
+          <div class="iapp-shot-label">Student Profile</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:linear-gradient(135deg,#07101e,#0f2040);padding:14px;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:10px;font-weight:800;color:white">Report Card</div>
+            <div style="background:rgba(255,255,255,.04);border-radius:10px;padding:10px">
+              <div style="font-size:9px;font-weight:800;color:white;margin-bottom:6px">Chipo Mupfumi · Form 3A</div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.6);margin-bottom:3px"><span>Mathematics</span><span style="color:#10e87a;font-weight:700">87% A</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.6);margin-bottom:3px"><span>English</span><span style="color:#10e87a;font-weight:700">91% A</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.6);margin-bottom:3px"><span>Science</span><span style="color:#38bdf8;font-weight:700">78% B</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.6)"><span>History</span><span style="color:#38bdf8;font-weight:700">74% B</span></div>
+            </div>
+            <div style="background:rgba(16,232,122,.1);border-radius:8px;padding:7px;display:flex;justify-content:space-between;font-size:9px"><span style="color:rgba(255,255,255,.6)">Overall Average</span><span style="color:#10e87a;font-weight:800">82.5% — A</span></div>
+          </div>
+          <div class="iapp-shot-label">Report Cards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="iapp-section">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Benefits</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">How School Management<br/><em>Helps Your School</em></h2>
+      </div>
+      <div class="iapp-benefits-grid">
+        <div class="iapp-benefit scroll-reveal" style="--sd:0s">
+          <div class="iapp-benefit-bullet">⏱️</div>
+          <div>
+            <h4>Save Time on Administration</h4>
+            <p>Automate repetitive tasks like generating report cards, fee statements, and attendance summaries. What used to take days now takes minutes.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.08s">
+          <div class="iapp-benefit-bullet">💰</div>
+          <div>
+            <h4>Reduce Paperwork</h4>
+            <p>Eliminate paper-based registers, fee books, and manual report writing. Everything is stored digitally — secure, backed up, and instantly searchable.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.16s">
+          <div class="iapp-benefit-bullet">📈</div>
+          <div>
+            <h4>Track Academic Performance</h4>
+            <p>Monitor student progress over time. Identify struggling students early, track class averages, and provide evidence-based feedback to parents and teachers.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.24s">
+          <div class="iapp-benefit-bullet">😊</div>
+          <div>
+            <h4>Improve Parent Communication</h4>
+            <p>Share report cards, fee statements, and important notices with parents instantly via WhatsApp. Keep parents informed and engaged with their child's progress.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header" style="text-align:center">
+        <div class="section-kicker scroll-reveal">Pricing</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Affordable for<br/><em>Every School</em></h2>
+        <p class="section-sub scroll-reveal" style="--sd:.2s;margin:0 auto">Enterprise-quality software at prices that work for Zimbabwe schools. Contact us for custom pricing for large institutions.</p>
+      </div>
+      <div class="iapp-pricing-grid scroll-reveal" style="--sd:.1s">
+        <div class="iapp-price-card">
+          <div class="iapp-price-tier">Small School</div>
+          <div class="iapp-price-amount">$20</div>
+          <div class="iapp-price-period">per month · up to 200 students</div>
+          <ul class="iapp-price-features">
+            <li>Student registration &amp; profiles</li>
+            <li>Fee management</li>
+            <li>Attendance tracking</li>
+            <li>Basic report cards</li>
+            <li>2 admin accounts</li>
+          </ul>
+          <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20School%20Management%20Small%20School%20Plan" target="_blank" rel="noopener" class="btn-ghost" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+        <div class="iapp-price-card featured">
+          <div class="iapp-price-badge">Most Popular</div>
+          <div class="iapp-price-tier">Full School</div>
+          <div class="iapp-price-amount">$50</div>
+          <div class="iapp-price-period">per month · unlimited students</div>
+          <ul class="iapp-price-features">
+            <li>Everything in Small School</li>
+            <li>Timetable management</li>
+            <li>Teacher management</li>
+            <li>Advanced reports &amp; transcripts</li>
+            <li>WhatsApp parent sharing</li>
+            <li>Unlimited admin accounts</li>
+            <li>Priority support &amp; training</li>
+          </ul>
+          <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20School%20Management%20Full%20School%20Plan" target="_blank" rel="noopener" class="btn-primary magnetic" style="width:100%;justify-content:center">
+            <span>Get Started</span>
+            <div class="btn-shine"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="iapp-cta">
+    <div class="container">
+      <div class="section-kicker scroll-reveal" style="display:inline-block;margin-bottom:16px">Ready to Start?</div>
+      <h2 class="scroll-reveal" style="--sd:.1s">Ready to Simplify<br/><em>Your School?</em></h2>
+      <p class="scroll-reveal" style="--sd:.2s">Join schools across Zimbabwe already running smarter with our School Management System. We'll set you up and train your staff — usually within 48 hours.</p>
+      <div class="iapp-cta-actions scroll-reveal" style="--sd:.3s">
+        <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20to%20set%20up%20School%20Management%20System" target="_blank" rel="noopener" class="btn-primary magnetic">
+          <span>Start Using This App</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          <div class="btn-shine"></div>
+        </a>
+        <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20a%20demo%20of%20School%20Management%20System" target="_blank" rel="noopener" class="btn-ghost">Request Demo</a>
+        <a href="../index.html#contact" class="btn-ghost">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top-line"></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../logo.png" alt="Freshinnov Labs" class="footer-logo-img"/>
+          </div>
+          <p>Building world-class digital tools for African businesses. Proudly Zimbabwean. 🇿🇼</p>
+          <div class="footer-contact-quick">
+            <a href="tel:+263775364959">+263 77 536 4959</a>
+            <a href="mailto:freshinnovlabs@gmail.com">freshinnovlabs@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="fl-col">
+            <h5>Services</h5>
+            <a href="../index.html#services">Mobile App Development</a>
+            <a href="../index.html#services">Website Development</a>
+            <a href="../index.html#services">Custom Software</a>
+          </div>
+          <div class="fl-col">
+            <h5>Our Apps</h5>
+            <a href="quotepro.html">QuotePro</a>
+            <a href="shop-sales.html">Shop Sales App</a>
+            <a href="wifi-ticketing.html">WiFi Ticketing</a>
+            <a href="school-management.html">School Management</a>
+          </div>
+          <div class="fl-col">
+            <h5>Company</h5>
+            <a href="../index.html#about">About Us</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="https://wa.me/263775364959" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Freshinnov Labs (Pvt) Ltd · All rights reserved</span>
+        <span>Made with ❤️ in Zimbabwe</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-float-text">Chat With Us on WhatsApp</span>
+  </a>
+
+  <script src="../main.js"></script>
+  <script>
+    setTimeout(() => {
+      document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('in'));
+    }, 100);
+  </script>
+</body>
+</html>

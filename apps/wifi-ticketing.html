@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WiFi Ticketing System — Voucher Management for Zimbabwe | Freshinnov Labs</title>
+  <meta name="description" content="Generate and manage WiFi access vouchers easily. Set time limits, monitor sessions, and grow your hotspot business. For hotels, lodges, and internet cafes in Zimbabwe."/>
+  <meta name="keywords" content="WiFi ticketing system Zimbabwe, WiFi voucher management, hotspot management, internet cafe system Zimbabwe, WiFi billing system"/>
+  <meta property="og:title" content="WiFi Ticketing System | Freshinnov Labs"/>
+  <meta property="og:description" content="Generate and manage WiFi access vouchers easily. Set time limits and track usage. For hotels, lodges, and internet cafes in Zimbabwe."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav class="nav-inner container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../logo.png" alt="Freshinnov Labs" class="nav-logo-img"/>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#services" class="nav-link">Services</a>
+        <a href="../apps.html" class="nav-link active">Apps</a>
+        <a href="../index.html#work" class="nav-link">Portfolio</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="nav-link nav-wa">
+          <svg viewBox="0 0 24 24" width="14" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="../index.html#contact" class="nav-cta magnetic">
+          <span>Start a Project</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="../index.html#services" class="mob-link">Services</a>
+      <a href="../apps.html" class="mob-link">Apps</a>
+      <a href="../index.html#work" class="mob-link">Portfolio</a>
+      <a href="../index.html#about" class="mob-link">About</a>
+      <a href="../index.html#contact" class="mob-link">Contact</a>
+      <a href="https://wa.me/263775364959" target="_blank" class="mob-cta">💬 WhatsApp Us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="iapp-hero">
+    <div class="iapp-hero-glow-1" style="background:radial-gradient(circle,rgba(56,189,248,.18),transparent 70%)"></div>
+    <div class="iapp-hero-glow-2" style="background:radial-gradient(circle,rgba(34,211,238,.12),transparent 70%)"></div>
+    <div class="container">
+      <div class="iapp-hero-inner">
+        <div class="iapp-hero-left">
+          <a href="../apps.html" class="iapp-hero-back">
+            <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 8H3M7 4l-4 4 4 4"/></svg>
+            All Apps
+          </a>
+          <div class="iapp-hero-tag reveal-up" style="--delay:.1s">WiFi Access Management · Web &amp; Android</div>
+          <h1 class="reveal-up" style="--delay:.2s">WiFi <em>Ticketing</em> System</h1>
+          <p class="iapp-hero-desc reveal-up" style="--delay:.3s">Generate and manage WiFi access vouchers easily. Set time and data limits per voucher, monitor active sessions, and turn your internet connection into a revenue stream. Perfect for hotels, lodges, schools, and internet cafes.</p>
+          <div class="iapp-hero-actions reveal-up" style="--delay:.4s">
+            <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20to%20set%20up%20WiFi%20Ticketing%20System" target="_blank" rel="noopener" class="btn-primary magnetic">
+              <span>Start Using WiFi Ticketing</span>
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              <div class="btn-shine"></div>
+            </a>
+            <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20a%20demo%20of%20WiFi%20Ticketing%20System" target="_blank" rel="noopener" class="btn-ghost">Request a Demo</a>
+          </div>
+        </div>
+        <div class="iapp-hero-right reveal-up" style="--delay:.25s">
+          <div class="iapp-phone-wrap">
+            <div class="iapp-phone-glow" style="background:radial-gradient(circle,rgba(56,189,248,.2),transparent 70%)"></div>
+            <div class="iapp-phone">
+              <div class="iapp-phone-notch"></div>
+              <div class="iapp-screen">
+                <div style="height:100%;display:flex;flex-direction:column;background:#0c1445">
+                  <div style="background:linear-gradient(135deg,#0c1445,#1e3a7a);padding:18px 16px 14px">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                      <div style="font-size:14px;font-weight:800;color:white">WiFi Tickets</div>
+                      <div style="font-size:13px">📶</div>
+                    </div>
+                    <div style="font-size:9px;color:rgba(255,255,255,.5);margin-top:4px">Active sessions: 7</div>
+                  </div>
+                  <div style="padding:12px;display:flex;flex-direction:column;gap:7px;flex:1;overflow:hidden">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                      <div style="background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.2);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:800;color:#38bdf8;font-family:'Cormorant Garamond',serif">24</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Tickets Today</div></div>
+                      <div style="background:rgba(16,232,122,.12);border:1px solid rgba(16,232,122,.15);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:800;color:#10e87a;font-family:'Cormorant Garamond',serif">$48</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Revenue Today</div></div>
+                    </div>
+                    <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px">Active Vouchers</div>
+                    <div style="background:rgba(16,232,122,.12);border:1px solid rgba(16,232,122,.25);border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center">
+                      <div><div style="font-size:11px;font-weight:800;color:white;font-family:monospace">FI-2095</div><div style="font-size:8px;color:rgba(255,255,255,.4)">24 Hours · Rm 12</div></div>
+                      <span style="font-size:8px;font-weight:700;color:#10e87a">● Active</span>
+                    </div>
+                    <div style="background:rgba(16,232,122,.12);border:1px solid rgba(16,232,122,.25);border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center">
+                      <div><div style="font-size:11px;font-weight:800;color:white;font-family:monospace">FI-2096</div><div style="font-size:8px;color:rgba(255,255,255,.4)">1 Hour · Lobby</div></div>
+                      <span style="font-size:8px;font-weight:700;color:#10e87a">● Active</span>
+                    </div>
+                    <div style="background:rgba(255,255,255,.05);border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center">
+                      <div><div style="font-size:11px;font-weight:800;color:rgba(255,255,255,.5);font-family:monospace">FI-2094</div><div style="font-size:8px;color:rgba(255,255,255,.3)">1 Hour · Expired</div></div>
+                      <span style="font-size:8px;font-weight:700;color:rgba(255,255,255,.3)">Expired</span>
+                    </div>
+                    <div style="background:linear-gradient(90deg,#38bdf8,#22d3ee);color:#0c1445;border-radius:10px;padding:10px;text-align:center;font-size:10px;font-weight:800;margin-top:auto">+ Generate Voucher</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Target Users</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Who This App<br/><em>Is For</em></h2>
+      </div>
+      <div class="iapp-who-grid">
+        <div class="iapp-who-card scroll-reveal" style="--sd:0s">
+          <div class="iapp-who-icon">🏨</div>
+          <div class="iapp-who-label">Hotels &amp; Lodges</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.08s">
+          <div class="iapp-who-icon">💻</div>
+          <div class="iapp-who-label">Internet Cafes</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.16s">
+          <div class="iapp-who-icon">🎓</div>
+          <div class="iapp-who-label">Schools &amp; Colleges</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.24s">
+          <div class="iapp-who-icon">🏢</div>
+          <div class="iapp-who-label">Offices &amp; Public Spaces</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="iapp-section">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Features</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Everything to Run<br/><em>Your Hotspot</em></h2>
+      </div>
+      <div class="iapp-features-grid">
+        <div class="iapp-feat scroll-reveal" style="--sd:0s">
+          <div class="iapp-feat-icon">🎟️</div>
+          <div class="iapp-feat-body">
+            <h4>Generate Vouchers Instantly</h4>
+            <p>Create WiFi access vouchers in seconds. Set custom time limits — 1 hour, 3 hours, 24 hours, 7 days, or monthly packages. Each voucher gets a unique code.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.08s">
+          <div class="iapp-feat-icon">📲</div>
+          <div class="iapp-feat-body">
+            <h4>Print or Share via WhatsApp</h4>
+            <p>Print physical voucher tickets for your customers, or send the code directly via WhatsApp in seconds. Works with standard receipt printers.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.16s">
+          <div class="iapp-feat-icon">👁️</div>
+          <div class="iapp-feat-body">
+            <h4>Monitor Active Sessions</h4>
+            <p>See all currently active sessions in real time — who's connected, how much time is remaining, and which voucher they're using. Kick sessions instantly if needed.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.24s">
+          <div class="iapp-feat-icon">💼</div>
+          <div class="iapp-feat-body">
+            <h4>Multiple Voucher Packages</h4>
+            <p>Set up different pricing tiers — hourly, daily, weekly. Each package has its own price, time limit, and data limit. Customers choose what suits them.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.32s">
+          <div class="iapp-feat-icon">📊</div>
+          <div class="iapp-feat-body">
+            <h4>Revenue &amp; Usage Reports</h4>
+            <p>Track how many vouchers were sold, which packages are most popular, and your daily revenue — all from one dashboard.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.4s">
+          <div class="iapp-feat-icon">🔐</div>
+          <div class="iapp-feat-body">
+            <h4>Secure Access Control</h4>
+            <p>Only customers with valid vouchers can connect. Expired or used vouchers are automatically blocked, keeping your network secure and monetised.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header" style="text-align:center">
+        <div class="section-kicker scroll-reveal">App Preview</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">See It in<br/><em>Action</em></h2>
+      </div>
+      <div class="iapp-screenshots scroll-reveal" style="--sd:.1s">
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:linear-gradient(135deg,#0c1445,#1e3a7a);padding:14px;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:10px;font-weight:800;color:white">Dashboard</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+              <div style="background:rgba(56,189,248,.12);border-radius:10px;padding:10px;text-align:center"><div style="font-size:16px;font-weight:800;color:#38bdf8;font-family:'Cormorant Garamond',serif">24</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Tickets Today</div></div>
+              <div style="background:rgba(16,232,122,.12);border-radius:10px;padding:10px;text-align:center"><div style="font-size:16px;font-weight:800;color:#10e87a;font-family:'Cormorant Garamond',serif">$48</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Revenue</div></div>
+            </div>
+            <div style="background:rgba(16,232,122,.1);border:1px solid rgba(16,232,122,.2);border-radius:8px;padding:8px;font-size:9px;color:rgba(255,255,255,.8)">FI-2095 · Room 12 · ● Active 18h left</div>
+            <div style="background:rgba(16,232,122,.1);border:1px solid rgba(16,232,122,.2);border-radius:8px;padding:8px;font-size:9px;color:rgba(255,255,255,.8)">FI-2096 · Lobby · ● Active 45m left</div>
+          </div>
+          <div class="iapp-shot-label">Main Dashboard</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:#0c1445;padding:14px;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:10px;font-weight:800;color:white">New Voucher</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:10px">
+              <div style="font-size:8px;color:rgba(255,255,255,.4);margin-bottom:6px">SELECT PACKAGE</div>
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.3);border-radius:8px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px;color:#38bdf8;font-weight:700"><span>1 Hour</span><span>$0.50</span></div>
+                <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>3 Hours</span><span>$1.00</span></div>
+                <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>24 Hours</span><span>$2.00</span></div>
+                <div style="background:rgba(255,255,255,.04);border-radius:8px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>7 Days</span><span>$10.00</span></div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(90deg,#38bdf8,#22d3ee);color:#0c1445;border-radius:8px;padding:9px;text-align:center;font-size:9px;font-weight:800">Generate Voucher</div>
+          </div>
+          <div class="iapp-shot-label">Select Package</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:#0c1445;padding:14px;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center">
+            <div style="font-size:10px;font-weight:800;color:white;align-self:flex-start">Voucher Generated</div>
+            <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px;width:100%;text-align:center">
+              <div style="font-size:8px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">WiFi Access Code</div>
+              <div style="font-size:22px;font-weight:800;color:white;font-family:monospace;letter-spacing:3px">FI-2097</div>
+              <div style="font-size:8px;color:rgba(56,189,248,.8);margin-top:6px">1 Hour · Valid from now</div>
+            </div>
+            <div style="display:flex;gap:6px;width:100%">
+              <div style="flex:1;background:rgba(255,255,255,.06);border-radius:8px;padding:8px;text-align:center;font-size:9px;color:rgba(255,255,255,.7)">🖨 Print</div>
+              <div style="flex:1;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.3);border-radius:8px;padding:8px;text-align:center;font-size:9px;color:#25d366">💬 WhatsApp</div>
+            </div>
+          </div>
+          <div class="iapp-shot-label">Share Voucher</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:linear-gradient(135deg,#0c1445,#1e3a7a);padding:14px;display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:10px;font-weight:800;color:white">Monthly Report</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+              <div style="background:rgba(56,189,248,.1);border-radius:10px;padding:10px;text-align:center"><div style="font-size:14px;font-weight:800;color:#38bdf8;font-family:'Cormorant Garamond',serif">712</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Vouchers</div></div>
+              <div style="background:rgba(16,232,122,.1);border-radius:10px;padding:10px;text-align:center"><div style="font-size:14px;font-weight:800;color:#10e87a;font-family:'Cormorant Garamond',serif">$1,424</div><div style="font-size:8px;color:rgba(255,255,255,.4)">Revenue</div></div>
+            </div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>1-Hour packages</span><span>380 sold</span></div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>Daily packages</span><span>292 sold</span></div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px;display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.7)"><span>Weekly packages</span><span>40 sold</span></div>
+          </div>
+          <div class="iapp-shot-label">Revenue Reports</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="iapp-section">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Benefits</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">How WiFi Ticketing<br/><em>Helps You</em></h2>
+      </div>
+      <div class="iapp-benefits-grid">
+        <div class="iapp-benefit scroll-reveal" style="--sd:0s">
+          <div class="iapp-benefit-bullet">💰</div>
+          <div>
+            <h4>Monetise Your WiFi</h4>
+            <p>Turn your internet connection into a revenue stream. Hotels, lodges, and cafes across Zimbabwe are earning additional income by selling WiFi access to guests and customers.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.08s">
+          <div class="iapp-benefit-bullet">🔒</div>
+          <div>
+            <h4>Control Who Uses Your Network</h4>
+            <p>Prevent unauthorised users from using your bandwidth. Only customers with valid vouchers can connect — keeping your network fast and secure.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.16s">
+          <div class="iapp-benefit-bullet">📊</div>
+          <div>
+            <h4>Track Your Revenue</h4>
+            <p>See exactly how much you're earning from WiFi sales. Daily, weekly, and monthly reports show which packages sell best and when your busiest periods are.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.24s">
+          <div class="iapp-benefit-bullet">😊</div>
+          <div>
+            <h4>Improve Customer Service</h4>
+            <p>Guests get instant WiFi access with a simple code. No more asking for passwords or waiting for staff. Professional, seamless, and easy for everyone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header" style="text-align:center">
+        <div class="section-kicker scroll-reveal">Pricing</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Simple,<br/><em>Affordable Plans</em></h2>
+        <p class="section-sub scroll-reveal" style="--sd:.2s;margin:0 auto">Set up your hotspot in minutes. Start earning from day one.</p>
+      </div>
+      <div class="iapp-pricing-grid scroll-reveal" style="--sd:.1s">
+        <div class="iapp-price-card">
+          <div class="iapp-price-tier">Basic Plan</div>
+          <div class="iapp-price-amount">$10</div>
+          <div class="iapp-price-period">per month</div>
+          <ul class="iapp-price-features">
+            <li>Up to 200 vouchers/month</li>
+            <li>3 voucher packages</li>
+            <li>WhatsApp voucher sharing</li>
+            <li>Basic usage reports</li>
+            <li>Single admin account</li>
+          </ul>
+          <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20WiFi%20Ticketing%20Basic%20Plan" target="_blank" rel="noopener" class="btn-ghost" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+        <div class="iapp-price-card featured">
+          <div class="iapp-price-badge">Most Popular</div>
+          <div class="iapp-price-tier">Business Plan</div>
+          <div class="iapp-price-amount">$25</div>
+          <div class="iapp-price-period">per month</div>
+          <ul class="iapp-price-features">
+            <li>Unlimited vouchers</li>
+            <li>Unlimited packages</li>
+            <li>Print receipt support</li>
+            <li>Advanced revenue reports</li>
+            <li>Multiple admin accounts</li>
+            <li>Priority support &amp; setup</li>
+          </ul>
+          <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20WiFi%20Ticketing%20Business%20Plan" target="_blank" rel="noopener" class="btn-primary magnetic" style="width:100%;justify-content:center">
+            <span>Get Started</span>
+            <div class="btn-shine"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="iapp-cta">
+    <div class="container">
+      <div class="section-kicker scroll-reveal" style="display:inline-block;margin-bottom:16px">Ready to Start?</div>
+      <h2 class="scroll-reveal" style="--sd:.1s">Ready to Simplify<br/><em>Your Business?</em></h2>
+      <p class="scroll-reveal" style="--sd:.2s">Start selling WiFi access today. We'll set everything up for you — usually within 24 hours.</p>
+      <div class="iapp-cta-actions scroll-reveal" style="--sd:.3s">
+        <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20to%20set%20up%20WiFi%20Ticketing%20System" target="_blank" rel="noopener" class="btn-primary magnetic">
+          <span>Start Using WiFi Ticketing</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          <div class="btn-shine"></div>
+        </a>
+        <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20a%20demo%20of%20WiFi%20Ticketing%20System" target="_blank" rel="noopener" class="btn-ghost">Request Demo</a>
+        <a href="../index.html#contact" class="btn-ghost">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top-line"></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../logo.png" alt="Freshinnov Labs" class="footer-logo-img"/>
+          </div>
+          <p>Building world-class digital tools for African businesses. Proudly Zimbabwean. 🇿🇼</p>
+          <div class="footer-contact-quick">
+            <a href="tel:+263775364959">+263 77 536 4959</a>
+            <a href="mailto:freshinnovlabs@gmail.com">freshinnovlabs@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="fl-col">
+            <h5>Services</h5>
+            <a href="../index.html#services">Mobile App Development</a>
+            <a href="../index.html#services">Website Development</a>
+            <a href="../index.html#services">Custom Software</a>
+          </div>
+          <div class="fl-col">
+            <h5>Our Apps</h5>
+            <a href="quotepro.html">QuotePro</a>
+            <a href="shop-sales.html">Shop Sales App</a>
+            <a href="wifi-ticketing.html">WiFi Ticketing</a>
+            <a href="school-management.html">School Management</a>
+          </div>
+          <div class="fl-col">
+            <h5>Company</h5>
+            <a href="../index.html#about">About Us</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="https://wa.me/263775364959" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Freshinnov Labs (Pvt) Ltd · All rights reserved</span>
+        <span>Made with ❤️ in Zimbabwe</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-float-text">Chat With Us on WhatsApp</span>
+  </a>
+
+  <script src="../main.js"></script>
+  <script>
+    setTimeout(() => {
+      document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('in'));
+    }, 100);
+  </script>
+</body>
+</html>
