@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Freshinnov Labs — Innovation & IT Solutions · Zimbabwe</title>
-  <meta name="description" content="Freshinnov Labs (Private) Limited — Zimbabwe's premier software studio. We build mobile apps, websites, and custom digital tools that empower African businesses."/>
-  <meta name="keywords" content="Zimbabwe software, mobile apps Zimbabwe, web development Harare, IT solutions Zimbabwe, Android apps, school management system Zimbabwe"/>
+  <title>Business Apps for Small Businesses in Zimbabwe | Freshinnov Labs</title>
+  <meta name="description" content="We build powerful business apps including quotation apps, sales tracking systems, WiFi voucher systems, and school management software. Proudly Zimbabwean."/>
+  <meta name="keywords" content="business apps Zimbabwe, quotation app Zimbabwe, sales tracker app, WiFi ticketing system Zimbabwe, school management system Zimbabwe, Android apps Harare, small business software Zimbabwe"/>
   <meta property="og:title" content="Freshinnov Labs — Innovation & IT Solutions"/>
   <meta property="og:description" content="Building world-class digital tools for African businesses."/>
   <meta property="og:type" content="website"/>
@@ -755,6 +755,72 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
 /* ---- MAGNETIC BUTTON ---- */
 .magnetic { display: inline-flex; position: relative; }
 
+/* ---- FLOATING WHATSAPP BUTTON ---- */
+.wa-float {
+  position: fixed; bottom: 28px; right: 28px; z-index: 800;
+  background: #25d366; color: white;
+  display: flex; align-items: center; gap: 10px;
+  padding: 13px 22px; border-radius: 100px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 700;
+  box-shadow: 0 4px 24px rgba(37,211,102,.4);
+  transition: transform .3s var(--ease), box-shadow .3s;
+  text-decoration: none; white-space: nowrap;
+}
+.wa-float:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,.5); }
+.wa-float svg { flex-shrink: 0; }
+
+/* ---- APPS HOME SECTION ---- */
+.apps-home { padding: 120px 0; }
+.apps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.app-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  transition: transform .4s var(--ease), box-shadow .4s, border-color .3s;
+  display: flex; flex-direction: column;
+}
+.app-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.4); border-color: var(--border-hi); }
+.app-card-screen {
+  height: 160px; padding: 16px;
+  display: flex; flex-direction: column; gap: 10px; overflow: hidden;
+}
+.app-card-screen.qp-screen  { background: linear-gradient(135deg,#0d1e6e,#1a3aab); }
+.app-card-screen.ss-screen  { background: linear-gradient(135deg,#052e16,#064e33); }
+.app-card-screen.wf-screen  { background: linear-gradient(135deg,#0c1445,#1e3a7a); }
+.app-card-screen.sch-screen { background: linear-gradient(135deg,#1a0533,#3b0764); }
+.acs-header { display: flex; justify-content: space-between; align-items: center; }
+.acs-title  { font-size: 12px; font-weight: 800; color: rgba(255,255,255,.9); }
+.acs-icon   { font-size: 16px; }
+.acs-stat-num   { font-size: 22px; font-weight: 800; color: white; font-family: var(--font-display); }
+.acs-stat-label { font-size: 9px; color: rgba(255,255,255,.5); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+.acs-rows { display: flex; flex-direction: column; gap: 4px; margin-top: auto; }
+.acs-row {
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(255,255,255,.08); border-radius: 6px;
+  padding: 5px 8px; font-size: 9px; color: rgba(255,255,255,.7);
+}
+.acs-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.acs-dot.g { background: var(--green); }
+.acs-dot.a { background: var(--gold); }
+.acs-vouchers { display: flex; flex-direction: column; gap: 5px; }
+.acs-voucher {
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 6px; padding: 6px 10px;
+}
+.acs-voucher.act { background: rgba(16,232,122,.15); border-color: rgba(16,232,122,.3); }
+.acs-v-code { font-size: 10px; font-weight: 800; color: white; font-family: monospace; }
+.acs-v-dur  { font-size: 9px; color: rgba(255,255,255,.5); font-weight: 600; }
+.acs-voucher.act .acs-v-dur { color: var(--green); }
+.acs-school-stats { display: flex; gap: 6px; }
+.acs-ss { display: flex; flex-direction: column; align-items: center; flex: 1; background: rgba(255,255,255,.08); border-radius: 8px; padding: 8px 4px; }
+.acs-ss-n { font-size: 15px; font-weight: 800; color: white; font-family: var(--font-display); }
+.acs-ss-l { font-size: 8px; color: rgba(255,255,255,.5); font-weight: 600; text-transform: uppercase; letter-spacing: .3px; margin-top: 2px; }
+.app-card-body { padding: 20px 20px 24px; flex: 1; display: flex; flex-direction: column; }
+.app-card-tag  { font-size: 10px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+.app-card-body h3 { font-size: 17px; font-weight: 700; color: var(--text-1); margin-bottom: 9px; letter-spacing: -.3px; line-height: 1.2; }
+.app-card-body p  { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.apps-home-cta { display: flex; gap: 16px; justify-content: center; align-items: center; margin-top: 56px; flex-wrap: wrap; }
+
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; padding-top: 100px; text-align: center; }
@@ -772,6 +838,7 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
   .why-card:nth-child(n) { border-radius: 0; }
   .about-inner { grid-template-columns: 1fr; gap: 50px; }
   .footer-main { grid-template-columns: 1fr; }
+  .apps-grid { grid-template-columns: repeat(2,1fr); }
 }
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -784,6 +851,7 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
   .form-row-2 { grid-template-columns: 1fr; }
   .about-values { grid-template-columns: 1fr; }
   .footer-links-grid { grid-template-columns: repeat(2,1fr); }
+  .apps-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
   .why-grid { grid-template-columns: 1fr; }
@@ -793,6 +861,8 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
   .hero-device { transform: scale(.85); }
   .hero-eyebrow { font-size: 11px; padding: 6px 14px; }
   .abc-stats { gap: 12px; }
+  .wa-float .wa-float-text { display: none; }
+  .wa-float { padding: 14px; border-radius: 50%; width: 52px; height: 52px; justify-content: center; }
 }
 
 </style>
@@ -814,7 +884,8 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
       </a>
       <div class="nav-links">
         <a href="#services" class="nav-link">Services</a>
-        <a href="#work" class="nav-link">Work</a>
+        <a href="apps.html" class="nav-link">Apps</a>
+        <a href="#work" class="nav-link">Portfolio</a>
         <a href="#about" class="nav-link">About</a>
         <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="nav-link nav-wa">
           <svg viewBox="0 0 24 24" width="14" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -831,7 +902,8 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
     </nav>
     <div class="mobile-menu" id="mobile-menu">
       <a href="#services" class="mob-link">Services</a>
-      <a href="#work" class="mob-link">Work</a>
+      <a href="apps.html" class="mob-link">Apps</a>
+      <a href="#work" class="mob-link">Portfolio</a>
       <a href="#about" class="mob-link">About</a>
       <a href="#contact" class="mob-link">Contact</a>
       <a href="https://wa.me/263775364959" target="_blank" class="mob-cta">💬 WhatsApp Us</a>
@@ -1104,6 +1176,124 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
           </ul>
           <a href="#contact" class="svc-link">Get started →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS SECTION -->
+  <section class="apps-home" id="apps">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-kicker scroll-reveal">Our Products</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Our Business<br/><em>Apps</em></h2>
+        <p class="section-sub scroll-reveal" style="--sd:.2s">We build powerful, easy-to-use business applications designed to help companies save time, manage operations, and grow faster.</p>
+      </div>
+      <div class="apps-grid">
+
+        <!-- QuotePro -->
+        <div class="app-card scroll-reveal" style="--sd:0s">
+          <div class="app-card-screen qp-screen">
+            <div class="acs-header">
+              <span class="acs-title">QuotePro</span>
+              <span class="acs-icon">📄</span>
+            </div>
+            <div>
+              <div class="acs-stat-num">$5,300</div>
+              <div class="acs-stat-label">Monthly Revenue</div>
+            </div>
+            <div class="acs-rows">
+              <div class="acs-row"><span>#1023 Nexus Corp</span><span class="acs-dot g"></span></div>
+              <div class="acs-row"><span>#1022 Bright Media</span><span class="acs-dot g"></span></div>
+              <div class="acs-row"><span>#1021 TechStart</span><span class="acs-dot a"></span></div>
+            </div>
+          </div>
+          <div class="app-card-body">
+            <div class="app-card-tag">Quotation &amp; Invoicing</div>
+            <h3>QuotePro</h3>
+            <p>Create professional quotations quickly and send them to customers instantly via WhatsApp or email.</p>
+            <a href="apps/quotepro.html" class="svc-link">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- Shop Sales -->
+        <div class="app-card scroll-reveal" style="--sd:.08s">
+          <div class="app-card-screen ss-screen">
+            <div class="acs-header">
+              <span class="acs-title">Shop Sales</span>
+              <span class="acs-icon">🛒</span>
+            </div>
+            <div>
+              <div class="acs-stat-num" style="color:#10e87a">$840</div>
+              <div class="acs-stat-label">Today's Sales</div>
+            </div>
+            <div class="acs-rows">
+              <div class="acs-row"><span>Groceries</span><span style="color:#10e87a;font-weight:700">+$320</span></div>
+              <div class="acs-row"><span>Electronics</span><span style="color:#10e87a;font-weight:700">+$520</span></div>
+              <div class="acs-row"><span>Rent expense</span><span style="color:#f59e0b;font-weight:700">-$200</span></div>
+            </div>
+          </div>
+          <div class="app-card-body">
+            <div class="app-card-tag">Sales &amp; Expense Tracking</div>
+            <h3>Shop Sales App</h3>
+            <p>Record daily sales and expenses, even without internet. Know your profit every day.</p>
+            <a href="apps/shop-sales.html" class="svc-link">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- WiFi Ticketing -->
+        <div class="app-card scroll-reveal" style="--sd:.16s">
+          <div class="app-card-screen wf-screen">
+            <div class="acs-header">
+              <span class="acs-title">WiFi Tickets</span>
+              <span class="acs-icon">📶</span>
+            </div>
+            <div class="acs-vouchers">
+              <div class="acs-voucher"><span class="acs-v-code">FI-2094</span><span class="acs-v-dur">1 Hour · $0.50</span></div>
+              <div class="acs-voucher act"><span class="acs-v-code">FI-2095</span><span class="acs-v-dur">24 Hours · $2</span></div>
+              <div class="acs-voucher"><span class="acs-v-code">FI-2096</span><span class="acs-v-dur">7 Days · $10</span></div>
+            </div>
+          </div>
+          <div class="app-card-body">
+            <div class="app-card-tag">WiFi Management</div>
+            <h3>WiFi Ticketing System</h3>
+            <p>Generate and manage WiFi access vouchers easily. Set time limits and track usage.</p>
+            <a href="apps/wifi-ticketing.html" class="svc-link">Learn More →</a>
+          </div>
+        </div>
+
+        <!-- School Management -->
+        <div class="app-card scroll-reveal" style="--sd:.24s">
+          <div class="app-card-screen sch-screen">
+            <div class="acs-header">
+              <span class="acs-title">School Mgr</span>
+              <span class="acs-icon">🎓</span>
+            </div>
+            <div class="acs-school-stats">
+              <div class="acs-ss"><span class="acs-ss-n">342</span><span class="acs-ss-l">Students</span></div>
+              <div class="acs-ss"><span class="acs-ss-n">18</span><span class="acs-ss-l">Classes</span></div>
+              <div class="acs-ss"><span class="acs-ss-n">94%</span><span class="acs-ss-l">Fees Paid</span></div>
+            </div>
+            <div class="acs-rows" style="margin-top:8px">
+              <div class="acs-row"><span>📚 Students</span><span>→</span></div>
+              <div class="acs-row"><span>💰 Fee Records</span><span>→</span></div>
+            </div>
+          </div>
+          <div class="app-card-body">
+            <div class="app-card-tag">Education Management</div>
+            <h3>School Management System</h3>
+            <p>Manage students, fees, and reports from one dashboard. Built for Zimbabwe schools.</p>
+            <a href="apps/school-management.html" class="svc-link">Learn More →</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="apps-home-cta scroll-reveal">
+        <a href="apps.html" class="btn-primary magnetic">
+          <span>View All Apps</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          <div class="btn-shine"></div>
+        </a>
+        <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="btn-ghost">Request a Demo</a>
       </div>
     </div>
   </section>
@@ -1526,11 +1716,12 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
             <a href="#services">Cloud & Hosting</a>
           </div>
           <div class="fl-col">
-            <h5>Our Products</h5>
-            <a href="#work">Quotation Pro</a>
-            <a href="#work">Kumusha Kids App</a>
-            <a href="#work">School Management App</a>
-            <a href="#work">McDonvick Website</a>
+            <h5>Our Apps</h5>
+            <a href="apps.html">All Apps</a>
+            <a href="apps/quotepro.html">QuotePro</a>
+            <a href="apps/shop-sales.html">Shop Sales App</a>
+            <a href="apps/wifi-ticketing.html">WiFi Ticketing</a>
+            <a href="apps/school-management.html">School Management</a>
           </div>
           <div class="fl-col">
             <h5>Company</h5>
@@ -1547,6 +1738,12 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
       </div>
     </div>
   </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-float-text">Chat With Us on WhatsApp</span>
+  </a>
 
   <script>
 /* ================================================================

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuotePro — Professional Quotation & Invoice App for Zimbabwe | Freshinnov Labs</title>
+  <meta name="description" content="QuotePro helps small businesses in Zimbabwe create professional quotations and invoices in under 60 seconds. Works offline. Share via WhatsApp instantly."/>
+  <meta name="keywords" content="quotation app Zimbabwe, invoice app Zimbabwe, QuotePro, business quotation software, Android invoice app Harare"/>
+  <meta property="og:title" content="QuotePro — Quotation & Invoice App | Freshinnov Labs"/>
+  <meta property="og:description" content="Create professional quotations quickly and send them to customers instantly. Works offline. For small businesses in Zimbabwe."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav class="nav-inner container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../logo.png" alt="Freshinnov Labs" class="nav-logo-img"/>
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#services" class="nav-link">Services</a>
+        <a href="../apps.html" class="nav-link active">Apps</a>
+        <a href="../index.html#work" class="nav-link">Portfolio</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="nav-link nav-wa">
+          <svg viewBox="0 0 24 24" width="14" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="../index.html#contact" class="nav-cta magnetic">
+          <span>Start a Project</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="../index.html#services" class="mob-link">Services</a>
+      <a href="../apps.html" class="mob-link">Apps</a>
+      <a href="../index.html#work" class="mob-link">Portfolio</a>
+      <a href="../index.html#about" class="mob-link">About</a>
+      <a href="../index.html#contact" class="mob-link">Contact</a>
+      <a href="https://wa.me/263775364959" target="_blank" class="mob-cta">💬 WhatsApp Us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="iapp-hero">
+    <div class="iapp-hero-glow-1"></div>
+    <div class="iapp-hero-glow-2"></div>
+    <div class="container">
+      <div class="iapp-hero-inner">
+        <div class="iapp-hero-left">
+          <a href="../apps.html" class="iapp-hero-back">
+            <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 8H3M7 4l-4 4 4 4"/></svg>
+            All Apps
+          </a>
+          <div class="iapp-hero-tag reveal-up" style="--delay:.1s">Quotation &amp; Invoicing · Android App</div>
+          <h1 class="reveal-up" style="--delay:.2s">Quote<em>Pro</em></h1>
+          <p class="iapp-hero-desc reveal-up" style="--delay:.3s">Create professional quotations quickly and send them to customers instantly. Convert approved quotes to invoices with one tap and generate branded PDF documents — all from your phone.</p>
+          <div class="iapp-hero-actions reveal-up" style="--delay:.4s">
+            <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20to%20start%20using%20QuotePro" target="_blank" rel="noopener" class="btn-primary magnetic">
+              <span>Start Using QuotePro</span>
+              <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              <div class="btn-shine"></div>
+            </a>
+            <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20a%20demo%20of%20QuotePro" target="_blank" rel="noopener" class="btn-ghost">Request a Demo</a>
+          </div>
+        </div>
+        <div class="iapp-hero-right reveal-up" style="--delay:.25s">
+          <div class="iapp-phone-wrap">
+            <div class="iapp-phone-glow"></div>
+            <div class="iapp-phone">
+              <div class="iapp-phone-notch"></div>
+              <div class="iapp-screen">
+                <!-- QuotePro App UI -->
+                <div style="height:100%;display:flex;flex-direction:column;background:#f0f3fb">
+                  <div style="background:linear-gradient(135deg,#0d1e6e,#1a3aab);padding:18px 16px 14px">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                      <div style="font-size:14px;font-weight:800;color:white">Quotation Pro</div>
+                      <div style="width:28px;height:28px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px">👤</div>
+                    </div>
+                  </div>
+                  <div style="padding:12px;display:flex;flex-direction:column;gap:8px;flex:1;overflow:hidden">
+                    <div style="background:linear-gradient(135deg,#0d1e6e,#2d47a0);border-radius:14px;padding:16px">
+                      <div style="font-size:9px;color:rgba(255,255,255,.6);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Total This Month</div>
+                      <div style="font-size:28px;font-weight:800;color:white;font-family:'Cormorant Garamond',serif">$5,300.00</div>
+                      <div style="display:flex;gap:6px;margin-top:8px">
+                        <span style="font-size:8px;font-weight:700;padding:3px 8px;border-radius:100px;background:rgba(16,232,122,.2);color:#10e87a">4 Approved</span>
+                        <span style="font-size:8px;font-weight:700;padding:3px 8px;border-radius:100px;background:rgba(245,158,11,.2);color:#f59e0b">1 Pending</span>
+                      </div>
+                    </div>
+                    <div style="font-size:9px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.5px">Recent Quotes</div>
+                    <div style="background:white;border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center">
+                      <div><div style="font-size:9px;font-weight:700;color:#0d1e6e">#1023</div><div style="font-size:9px;color:#64748b">Nexus Corp</div></div>
+                      <div style="text-align:right"><span style="font-size:8px;font-weight:700;padding:2px 7px;border-radius:100px;background:#d1fae5;color:#065f46">✓ Approved</span><div style="font-size:11px;font-weight:800;color:#0f172a;margin-top:3px">$1,500</div></div>
+                    </div>
+                    <div style="background:white;border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center">
+                      <div><div style="font-size:9px;font-weight:700;color:#0d1e6e">#1022</div><div style="font-size:9px;color:#64748b">Bright Media</div></div>
+                      <div style="text-align:right"><span style="font-size:8px;font-weight:700;padding:2px 7px;border-radius:100px;background:#d1fae5;color:#065f46">✓ Approved</span><div style="font-size:11px;font-weight:800;color:#0f172a;margin-top:3px">$1,500</div></div>
+                    </div>
+                    <div style="background:white;border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center">
+                      <div><div style="font-size:9px;font-weight:700;color:#0d1e6e">#1021</div><div style="font-size:9px;color:#64748b">TechStart Ltd</div></div>
+                      <div style="text-align:right"><span style="font-size:8px;font-weight:700;padding:2px 7px;border-radius:100px;background:#fef3c7;color:#92400e">⏳ Pending</span><div style="font-size:11px;font-weight:800;color:#0f172a;margin-top:3px">$2,300</div></div>
+                    </div>
+                    <div style="background:#0d1e6e;color:white;border-radius:10px;padding:10px;text-align:center;font-size:10px;font-weight:800;margin-top:auto">+ Create New Quote</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Target Users</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Who This App<br/><em>Is For</em></h2>
+      </div>
+      <div class="iapp-who-grid">
+        <div class="iapp-who-card scroll-reveal" style="--sd:0s">
+          <div class="iapp-who-icon">🏗️</div>
+          <div class="iapp-who-label">Contractors &amp; Builders</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.08s">
+          <div class="iapp-who-icon">🛒</div>
+          <div class="iapp-who-label">Small Businesses</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.16s">
+          <div class="iapp-who-icon">💼</div>
+          <div class="iapp-who-label">Freelancers &amp; Consultants</div>
+        </div>
+        <div class="iapp-who-card scroll-reveal" style="--sd:.24s">
+          <div class="iapp-who-icon">🔧</div>
+          <div class="iapp-who-label">Service Providers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section class="iapp-section">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Features</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Everything You Need<br/><em>to Quote &amp; Invoice</em></h2>
+      </div>
+      <div class="iapp-features-grid">
+        <div class="iapp-feat scroll-reveal" style="--sd:0s">
+          <div class="iapp-feat-icon">📄</div>
+          <div class="iapp-feat-body">
+            <h4>Professional Quotations in 60 Seconds</h4>
+            <p>Fill in client details, add line items with prices, and generate a fully formatted quotation instantly. Your company branding is applied automatically.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.08s">
+          <div class="iapp-feat-icon">📲</div>
+          <div class="iapp-feat-body">
+            <h4>Share via WhatsApp &amp; Email</h4>
+            <p>Send your quote to clients directly from the app via WhatsApp or email. A PDF version is generated automatically — no computer needed.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.16s">
+          <div class="iapp-feat-icon">🔄</div>
+          <div class="iapp-feat-body">
+            <h4>Convert Quotes to Invoices</h4>
+            <p>When a client approves a quote, convert it to an invoice with one tap. Track which invoices have been paid and which are outstanding.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.24s">
+          <div class="iapp-feat-icon">📊</div>
+          <div class="iapp-feat-body">
+            <h4>Real-Time Approval Tracking</h4>
+            <p>See which quotes are pending, approved, or rejected at a glance. Follow up on outstanding quotes with one tap to resend a reminder.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.32s">
+          <div class="iapp-feat-icon">📶</div>
+          <div class="iapp-feat-body">
+            <h4>Works Fully Offline</h4>
+            <p>No internet? No problem. Create and manage your quotes and invoices even when you're offline. Data syncs automatically when you reconnect.</p>
+          </div>
+        </div>
+        <div class="iapp-feat scroll-reveal" style="--sd:.4s">
+          <div class="iapp-feat-icon">🎨</div>
+          <div class="iapp-feat-body">
+            <h4>Branded PDF Documents</h4>
+            <p>Every quote and invoice is generated as a professional, branded PDF with your business name, logo, and contact details — impressing clients every time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header" style="text-align:center">
+        <div class="section-kicker scroll-reveal">App Preview</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">See It in<br/><em>Action</em></h2>
+      </div>
+      <div class="iapp-screenshots scroll-reveal" style="--sd:.1s">
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:linear-gradient(135deg,#0d1e6e,#1a3aab);padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:11px;font-weight:800;color:white">Dashboard</div>
+            <div style="background:linear-gradient(135deg,#0d1e6e,#2d47a0);border-radius:12px;padding:14px"><div style="font-size:9px;color:rgba(255,255,255,.6);margin-bottom:3px">This Month</div><div style="font-size:22px;font-weight:800;color:white;font-family:'Cormorant Garamond',serif">$5,300</div></div>
+            <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:8px;font-size:9px;color:rgba(255,255,255,.8)">#1023 · Nexus Corp · $1,500 ✓</div>
+            <div style="background:rgba(255,255,255,.08);border-radius:8px;padding:8px;font-size:9px;color:rgba(255,255,255,.8)">#1022 · Bright Media · $1,500 ✓</div>
+            <div style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);border-radius:8px;padding:8px;font-size:9px;color:#f59e0b">#1021 · TechStart · $2,300 ⏳</div>
+          </div>
+          <div class="iapp-shot-label">Quote Dashboard</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:#f0f3fb;padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:11px;font-weight:800;color:#0d1e6e">New Quotation</div>
+            <div style="background:white;border-radius:10px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+              <div style="font-size:8px;color:#64748b;margin-bottom:3px">CLIENT NAME</div>
+              <div style="font-size:11px;font-weight:600;color:#0f172a">Nexus Corporation</div>
+            </div>
+            <div style="background:white;border-radius:10px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+              <div style="font-size:8px;color:#64748b;margin-bottom:5px">LINE ITEMS</div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:#0f172a;margin-bottom:3px"><span>Web Design</span><span>$800</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:#0f172a"><span>Logo Design</span><span>$300</span></div>
+              <div style="border-top:1px solid #e2e8f0;margin-top:6px;padding-top:6px;display:flex;justify-content:space-between;font-size:10px;font-weight:800;color:#0d1e6e"><span>Total</span><span>$1,100</span></div>
+            </div>
+            <div style="background:#0d1e6e;color:white;border-radius:8px;padding:8px;text-align:center;font-size:9px;font-weight:800">📄 Generate PDF &amp; Send</div>
+          </div>
+          <div class="iapp-shot-label">Create Quotation</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:#f0f3fb;padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:11px;font-weight:800;color:#0d1e6e">Invoice #INV-1023</div>
+            <div style="background:white;border-radius:10px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+              <div style="font-size:8px;color:#64748b;margin-bottom:3px">BILLED TO</div>
+              <div style="font-size:11px;font-weight:700;color:#0f172a">Nexus Corp</div>
+              <div style="font-size:9px;color:#64748b">info@nexuscorp.co.zw</div>
+            </div>
+            <div style="background:white;border-radius:10px;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)">
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:#64748b;margin-bottom:4px"><span>Subtotal</span><span>$1,500</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:#64748b;margin-bottom:6px"><span>Tax (0%)</span><span>$0</span></div>
+              <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:800;color:#0d1e6e"><span>TOTAL DUE</span><span>$1,500</span></div>
+            </div>
+            <span style="font-size:8px;font-weight:700;padding:4px 10px;border-radius:100px;background:#d1fae5;color:#065f46;text-align:center">✓ PAID</span>
+          </div>
+          <div class="iapp-shot-label">Invoice View</div>
+        </div>
+        <div class="iapp-shot">
+          <div class="iapp-shot-screen" style="background:linear-gradient(135deg,#0d1e6e,#1a3aab);padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="font-size:11px;font-weight:800;color:white">Reports</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+              <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:10px;text-align:center"><div style="font-size:16px;font-weight:800;color:white;font-family:'Cormorant Garamond',serif">12</div><div style="font-size:8px;color:rgba(255,255,255,.5)">Quotes Sent</div></div>
+              <div style="background:rgba(16,232,122,.15);border:1px solid rgba(16,232,122,.2);border-radius:10px;padding:10px;text-align:center"><div style="font-size:16px;font-weight:800;color:#10e87a;font-family:'Cormorant Garamond',serif">8</div><div style="font-size:8px;color:rgba(255,255,255,.5)">Approved</div></div>
+              <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:10px;text-align:center"><div style="font-size:16px;font-weight:800;color:white;font-family:'Cormorant Garamond',serif">$12k</div><div style="font-size:8px;color:rgba(255,255,255,.5)">Revenue</div></div>
+              <div style="background:rgba(245,158,11,.15);border-radius:10px;padding:10px;text-align:center"><div style="font-size:16px;font-weight:800;color:#f59e0b;font-family:'Cormorant Garamond',serif">4</div><div style="font-size:8px;color:rgba(255,255,255,.5)">Pending</div></div>
+            </div>
+          </div>
+          <div class="iapp-shot-label">Reports &amp; Analytics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="iapp-section">
+    <div class="container">
+      <div class="iapp-section-header">
+        <div class="section-kicker scroll-reveal">Benefits</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">How QuotePro<br/><em>Helps You</em></h2>
+      </div>
+      <div class="iapp-benefits-grid">
+        <div class="iapp-benefit scroll-reveal" style="--sd:0s">
+          <div class="iapp-benefit-bullet">⏱️</div>
+          <div>
+            <h4>Save Hours Every Week</h4>
+            <p>Stop manually typing quotations in Word documents. QuotePro lets you create a professional quote in under 60 seconds — saving hours of admin work every week.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.08s">
+          <div class="iapp-benefit-bullet">✨</div>
+          <div>
+            <h4>Look More Professional</h4>
+            <p>Branded PDF quotes and invoices make your business look established and trustworthy. Win more clients by presenting yourself as a credible, professional business.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.16s">
+          <div class="iapp-benefit-bullet">💰</div>
+          <div>
+            <h4>Track What You're Owed</h4>
+            <p>Never lose track of unpaid invoices. QuotePro keeps a clear record of every quote and invoice — showing you instantly what's been paid and what's outstanding.</p>
+          </div>
+        </div>
+        <div class="iapp-benefit scroll-reveal" style="--sd:.24s">
+          <div class="iapp-benefit-bullet">📉</div>
+          <div>
+            <h4>Reduce Paperwork</h4>
+            <p>Everything is digital and stored on your phone. No more paper files, no more lost quotes. Access any quote or invoice instantly, years after it was created.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="iapp-section alt">
+    <div class="container">
+      <div class="iapp-section-header" style="text-align:center">
+        <div class="section-kicker scroll-reveal">Pricing</div>
+        <h2 class="section-title scroll-reveal" style="--sd:.1s">Simple,<br/><em>Affordable Plans</em></h2>
+        <p class="section-sub scroll-reveal" style="--sd:.2s;margin:0 auto">No hidden fees. Cancel anytime. Start with a free demo today.</p>
+      </div>
+      <div class="iapp-pricing-grid scroll-reveal" style="--sd:.1s">
+        <div class="iapp-price-card">
+          <div class="iapp-price-tier">Starter Plan</div>
+          <div class="iapp-price-amount">$5</div>
+          <div class="iapp-price-period">per month</div>
+          <ul class="iapp-price-features">
+            <li>Up to 20 quotes per month</li>
+            <li>PDF generation</li>
+            <li>WhatsApp &amp; email sharing</li>
+            <li>Offline access</li>
+            <li>Basic reporting</li>
+          </ul>
+          <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20the%20QuotePro%20Starter%20Plan" target="_blank" rel="noopener" class="btn-ghost" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+        <div class="iapp-price-card featured">
+          <div class="iapp-price-badge">Most Popular</div>
+          <div class="iapp-price-tier">Business Plan</div>
+          <div class="iapp-price-amount">$15</div>
+          <div class="iapp-price-period">per month</div>
+          <ul class="iapp-price-features">
+            <li>Unlimited quotes &amp; invoices</li>
+            <li>Branded PDF with your logo</li>
+            <li>Invoice &amp; payment tracking</li>
+            <li>Advanced reports &amp; analytics</li>
+            <li>Priority support</li>
+            <li>Multi-user access</li>
+          </ul>
+          <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20the%20QuotePro%20Business%20Plan" target="_blank" rel="noopener" class="btn-primary magnetic" style="width:100%;justify-content:center">
+            <span>Get Started</span>
+            <div class="btn-shine"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="iapp-cta">
+    <div class="container">
+      <div class="section-kicker scroll-reveal" style="display:inline-block;margin-bottom:16px">Ready to Start?</div>
+      <h2 class="scroll-reveal" style="--sd:.1s">Ready to Simplify<br/><em>Your Business?</em></h2>
+      <p class="scroll-reveal" style="--sd:.2s">Join hundreds of businesses in Zimbabwe already using QuotePro to win more clients and track their revenue.</p>
+      <div class="iapp-cta-actions scroll-reveal" style="--sd:.3s">
+        <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20to%20start%20using%20QuotePro" target="_blank" rel="noopener" class="btn-primary magnetic">
+          <span>Start Using QuotePro</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          <div class="btn-shine"></div>
+        </a>
+        <a href="https://wa.me/263775364959?text=Hi%2C%20I%27d%20like%20a%20demo%20of%20QuotePro" target="_blank" rel="noopener" class="btn-ghost">Request Demo</a>
+        <a href="../index.html#contact" class="btn-ghost">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top-line"></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="../logo.png" alt="Freshinnov Labs" class="footer-logo-img"/>
+          </div>
+          <p>Building world-class digital tools for African businesses. Proudly Zimbabwean. 🇿🇼</p>
+          <div class="footer-contact-quick">
+            <a href="tel:+263775364959">+263 77 536 4959</a>
+            <a href="mailto:freshinnovlabs@gmail.com">freshinnovlabs@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="fl-col">
+            <h5>Services</h5>
+            <a href="../index.html#services">Mobile App Development</a>
+            <a href="../index.html#services">Website Development</a>
+            <a href="../index.html#services">Custom Software</a>
+          </div>
+          <div class="fl-col">
+            <h5>Our Apps</h5>
+            <a href="quotepro.html">QuotePro</a>
+            <a href="shop-sales.html">Shop Sales App</a>
+            <a href="wifi-ticketing.html">WiFi Ticketing</a>
+            <a href="school-management.html">School Management</a>
+          </div>
+          <div class="fl-col">
+            <h5>Company</h5>
+            <a href="../index.html#about">About Us</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="https://wa.me/263775364959" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Freshinnov Labs (Pvt) Ltd · All rights reserved</span>
+        <span>Made with ❤️ in Zimbabwe</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-float-text">Chat With Us on WhatsApp</span>
+  </a>
+
+  <script src="../main.js"></script>
+  <script>
+    setTimeout(() => {
+      document.querySelectorAll('.reveal-up').forEach(el => el.classList.add('in'));
+    }, 100);
+  </script>
+</body>
+</html>
