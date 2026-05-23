@@ -3,2037 +3,514 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Business Apps for Small Businesses in Zimbabwe | Freshinnov Labs</title>
-  <meta name="description" content="We build powerful business apps including quotation apps, sales tracking systems, WiFi voucher systems, and school management software. Proudly Zimbabwean."/>
-  <meta name="keywords" content="business apps Zimbabwe, quotation app Zimbabwe, sales tracker app, WiFi ticketing system Zimbabwe, school management system Zimbabwe, Android apps Harare, small business software Zimbabwe"/>
-  <meta property="og:title" content="Freshinnov Labs — Innovation & IT Solutions"/>
-  <meta property="og:description" content="Building world-class digital tools for African businesses."/>
+  <title>Freshinnov Labs Zimbabwe | Websites, Mobile Apps &amp; Business Software</title>
+  <meta name="description" content="Zimbabwe software company providing websites, mobile apps, school systems and QuotePro quotation software."/>
+  <meta name="keywords" content="Website development Zimbabwe, Software company Zimbabwe, School management system Zimbabwe, Quotation app Zimbabwe, Mobile app developer Harare"/>
+  <meta name="theme-color" content="#081321"/>
+  <meta property="og:title" content="Freshinnov Labs Zimbabwe | Websites, Mobile Apps &amp; Business Software"/>
+  <meta property="og:description" content="Zimbabwe software company providing websites, mobile apps, school systems and QuotePro quotation software."/>
   <meta property="og:type" content="website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <style>
-/* ================================================================
-   FRESHINNOV LABS — WORLD-CLASS STYLESHEET
-   Dark luxury tech aesthetic with organic African energy
-   ================================================================ */
-
-:root {
-  /* Core palette */
-  --bg:        #070b14;
-  --surface:   #0d1525;
-  --surface-2: #111d33;
-  --card:      #0f1a2e;
-  --border:    rgba(255,255,255,.07);
-  --border-hi: rgba(255,255,255,.14);
-
-  /* Accents */
-  --green:     #10e87a;
-  --green-dim: rgba(16,232,122,.12);
-  --green-glow:rgba(16,232,122,.25);
-  --blue:      #2563eb;
-  --blue-light:#38bdf8;
-  --blue-dim:  rgba(37,99,235,.15);
-  --cyan:      #22d3ee;
-  --gold:      #f59e0b;
-  --wa:        #25d366;
-
-  /* Text */
-  --text-1:  #f0f4ff;
-  --text-2:  #94a3b8;
-  --text-3:  #475569;
-
-  /* Typography */
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'Outfit', system-ui, sans-serif;
-
-  /* Geometry */
-  --radius:    20px;
-  --radius-sm: 12px;
-  --radius-lg: 28px;
-
-  /* Motion */
-  --ease:  cubic-bezier(.16,1,.3,1);
-  --ease2: cubic-bezier(.4,0,.2,1);
-}
-
-/* ---- RESET ---- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font-body);
-  background: var(--bg);
-  color: var(--text-1);
-  line-height: 1.65;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-
-/* ---- NOISE OVERLAY ---- */
-.noise-overlay {
-  position: fixed; inset: 0; z-index: 9999;
-  pointer-events: none;
-  opacity: .025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* ---- CURSOR ---- */
-.cursor, .cursor-follower {
-  position: fixed; border-radius: 50%; pointer-events: none;
-  z-index: 10000; mix-blend-mode: difference; transition: opacity .3s;
-}
-.cursor {
-  width: 8px; height: 8px; background: white;
-  transform: translate(-50%,-50%);
-  transition: transform .1s, width .3s var(--ease), height .3s var(--ease);
-}
-.cursor-follower {
-  width: 36px; height: 36px;
-  border: 1.5px solid rgba(255,255,255,.35);
-  transform: translate(-50%,-50%);
-  transition: transform .18s var(--ease2), width .4s var(--ease), height .4s var(--ease), background .4s;
-}
-body.cursor-hover .cursor { width: 16px; height: 16px; }
-body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba(16,232,122,.08); border-color: rgba(16,232,122,.5); }
-@media (max-width: 768px) { .cursor, .cursor-follower { display: none; } }
-
-/* ---- CONTAINER ---- */
-.container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
-
-/* ---- UTILITIES ---- */
-.section-kicker {
-  display: inline-block;
-  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
-  text-transform: uppercase; color: var(--green);
-  background: var(--green-dim); border: 1px solid rgba(16,232,122,.2);
-  padding: 5px 14px; border-radius: 100px; margin-bottom: 18px;
-}
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(38px, 5vw, 62px);
-  color: var(--text-1); line-height: 1.1;
-  letter-spacing: -1px; margin-bottom: 18px;
-}
-.section-title em { font-style: italic; color: var(--blue-light); }
-.section-sub { font-size: 17px; color: var(--text-2); max-width: 520px; line-height: 1.75; }
-.section-header { margin-bottom: 64px; }
-.section-header.centered { text-align: center; }
-.section-header.centered .section-sub { margin: 0 auto; }
-
-/* ---- BUTTONS ---- */
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--green); color: #061a0e;
-  padding: 14px 30px; border-radius: 100px;
-  font-family: var(--font-body); font-size: 15px; font-weight: 700;
-  cursor: pointer; position: relative; overflow: hidden;
-  border: none; transition: transform .3s var(--ease), box-shadow .3s var(--ease);
-  box-shadow: 0 0 0 0 var(--green-glow);
-  text-decoration: none; white-space: nowrap;
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 40px var(--green-glow); }
-.btn-shine {
-  position: absolute; top: -50%; left: -60%;
-  width: 40%; height: 200%; background: rgba(255,255,255,.35);
-  transform: skewX(-20deg) translateX(-100%);
-  pointer-events: none;
-}
-.btn-primary:hover .btn-shine { animation: shine .6s var(--ease); }
-@keyframes shine { to { transform: skewX(-20deg) translateX(400%); } }
-
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: transparent; color: var(--text-1);
-  padding: 13px 28px; border-radius: 100px;
-  font-size: 15px; font-weight: 600;
-  border: 1.5px solid var(--border-hi);
-  cursor: pointer; transition: var(--ease2) .3s;
-  text-decoration: none; white-space: nowrap;
-}
-.btn-ghost:hover { border-color: var(--green); color: var(--green); background: var(--green-dim); }
-
-/* ---- SCROLL REVEAL ---- */
-.scroll-reveal, .reveal-up, .reveal-line {
-  opacity: 0; transform: translateY(28px);
-  transition: opacity .8s var(--ease), transform .8s var(--ease);
-  transition-delay: var(--sd, 0s);
-}
-.scroll-reveal.in, .reveal-up.in, .reveal-line.in {
-  opacity: 1; transform: translateY(0);
-}
-.reveal-line { display: block; }
-
-/* ---- NAVBAR ---- */
-#navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-  transition: background .4s, box-shadow .4s, backdrop-filter .4s;
-}
-#navbar.scrolled {
-  background: rgba(7,11,20,.88);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 1px 0 var(--border);
-}
-.nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  height: 72px;
-}
-.nav-logo { display: flex; align-items: center; gap: 12px; }
-.logo-icon { width: 38px; height: 44px; flex-shrink: 0; }
-.logo-text { display: flex; flex-direction: column; }
-.logo-brand { font-family: var(--font-body); font-size: 17px; font-weight: 800; color: var(--text-1); letter-spacing: -.4px; line-height: 1.1; }
-.logo-accent { color: var(--green); }
-.logo-tagline { font-size: 9.5px; font-weight: 500; color: var(--text-3); text-transform: uppercase; letter-spacing: 1.2px; margin-top: 1px; }
-
-.nav-links { display: flex; align-items: center; gap: 4px; }
-.nav-link {
-  font-size: 13.5px; font-weight: 500; color: var(--text-2);
-  padding: 8px 14px; border-radius: 8px;
-  transition: color .25s, background .25s;
-}
-.nav-link:hover { color: var(--text-1); background: rgba(255,255,255,.06); }
-.nav-wa {
-  display: flex; align-items: center; gap: 6px;
-  color: var(--wa) !important;
-}
-.nav-wa:hover { background: rgba(37,211,102,.1) !important; }
-.nav-cta {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--green); color: #061a0e !important;
-  padding: 9px 20px; border-radius: 100px;
-  font-size: 13.5px; font-weight: 700;
-  margin-left: 8px; border: none;
-  position: relative; overflow: hidden;
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
-}
-.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--green-glow); background: var(--green) !important; }
-
-.hamburger { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 6px; }
-.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text-1); border-radius: 2px; transition: .3s var(--ease); }
-
-.mobile-menu {
-  display: none; flex-direction: column; padding: 8px 20px 24px;
-  background: rgba(7,11,20,.97); backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--border);
-}
-.mobile-menu.open { display: flex; }
-.mob-link { font-size: 17px; font-weight: 500; color: var(--text-2); padding: 14px 0; border-bottom: 1px solid var(--border); transition: color .2s; }
-.mob-link:hover { color: var(--green); }
-.mob-cta { margin-top: 16px; padding: 14px; background: var(--green); color: #061a0e; font-weight: 700; font-size: 15px; text-align: center; border-radius: 12px; }
-
-/* ---- HERO ---- */
-.hero {
-  min-height: 100svh; position: relative; overflow: hidden;
-  display: flex; align-items: center;
-}
-#particle-canvas { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.hero-glow {
-  position: absolute; border-radius: 50%;
-  filter: blur(100px); pointer-events: none; z-index: 0;
-}
-.glow-1 { width: 700px; height: 700px; background: radial-gradient(circle, rgba(37,99,235,.2) 0%, transparent 70%); top: -200px; left: -200px; }
-.glow-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(16,232,122,.15) 0%, transparent 70%); bottom: -100px; right: -100px; }
-.glow-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(34,211,238,.1) 0%, transparent 70%); top: 50%; left: 55%; }
-
-.hero-content {
-  display: grid; grid-template-columns: 1.1fr 1fr;
-  gap: 60px; align-items: center;
-  min-height: 100svh; padding-top: 90px; padding-bottom: 80px;
-  position: relative; z-index: 2;
-}
-
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: rgba(255,255,255,.06); border: 1px solid var(--border-hi);
-  backdrop-filter: blur(12px); border-radius: 100px;
-  padding: 8px 18px; font-size: 12.5px; font-weight: 500; color: var(--text-2);
-  margin-bottom: 28px;
-}
-.flag { font-size: 16px; }
-.eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; animation: pulse 2.5s infinite; }
-@keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 var(--green-glow)} 50%{opacity:.7;box-shadow:0 0 0 6px transparent} }
-
-.hero-headline {
-  font-family: var(--font-display);
-  font-size: clamp(44px, 5.8vw, 78px);
-  color: var(--text-1); line-height: 1.06;
-  letter-spacing: -2px; margin-bottom: 24px;
-}
-.hero-headline .italic { font-style: italic; color: var(--blue-light); }
-.hero-headline .gradient-words {
-  background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 60%, var(--blue-light) 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text; font-style: italic;
-}
-.hero-body { font-size: 17px; color: var(--text-2); line-height: 1.75; margin-bottom: 36px; max-width: 480px; }
-
-.hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 52px; }
-
-.hero-stats { display: flex; align-items: center; gap: 28px; }
-.hstat { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
-.hstat-num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--text-1); line-height: 1; }
-.hstat-plus { font-size: 18px; font-weight: 700; color: var(--green); display: inline; }
-.hstat-label { font-size: 11px; font-weight: 500; color: var(--text-3); text-transform: uppercase; letter-spacing: .5px; }
-.hstat-div { width: 1px; height: 40px; background: var(--border-hi); }
-
-/* Hero device */
-.hero-right { display: flex; justify-content: center; align-items: center; }
-.hero-device { position: relative; }
-.device-glow {
-  position: absolute; inset: -40px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,.25), transparent 70%);
-  pointer-events: none; z-index: 0;
-}
-.device-frame {
-  width: 256px; height: 520px; border-radius: 44px;
-  background: #0a0f1e; border: 1.5px solid rgba(255,255,255,.12);
-  overflow: hidden; position: relative; z-index: 2;
-  box-shadow: 0 40px 80px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.08),
-              0 0 0 1px rgba(37,99,235,.2);
-}
-.device-notch {
-  width: 80px; height: 26px; background: #0a0f1e;
-  border-radius: 0 0 18px 18px; margin: 0 auto;
-  position: relative; z-index: 3;
-  border: 1.5px solid rgba(255,255,255,.08); border-top: none;
-}
-.device-screen { height: calc(100% - 26px); overflow: hidden; }
-
-/* App preview content */
-.app-preview { height: 100%; display: flex; flex-direction: column; background: #f0f3fb; }
-.app-topbar { background: linear-gradient(135deg, #0d1e6e 0%, #1a3aab 100%); padding: 14px 16px 12px; }
-.app-topbar-inner { display: flex; justify-content: space-between; align-items: center; }
-.app-topbar-title { font-size: 13px; font-weight: 800; color: white; }
-.app-topbar-icon { width: 28px; height: 28px; background: rgba(255,255,255,.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.app-content { padding: 12px; display: flex; flex-direction: column; gap: 8px; flex: 1; overflow: hidden; }
-.app-summary { }
-.app-sum-card { background: linear-gradient(135deg, #0d1e6e, #1a3aab); border-radius: 12px; padding: 14px; }
-.sum-label { display: block; font-size: 9px; color: rgba(255,255,255,.6); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
-.sum-val { font-size: 24px; font-weight: 800; color: white; font-family: var(--font-display); }
-.app-list-title { font-size: 10px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: .5px; padding: 0 2px; }
-.app-quote-item { background: white; border-radius: 10px; padding: 9px 11px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
-.aqi-left .aqi-id { font-size: 9px; font-weight: 700; color: #0d1e6e; }
-.aqi-left .aqi-client { font-size: 9px; color: #64748b; margin-top: 1px; }
-.aqi-right { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
-.aqi-badge { font-size: 8px; font-weight: 700; padding: 2px 7px; border-radius: 100px; }
-.aqi-badge.approved { background: #d1fae5; color: #065f46; }
-.aqi-badge.pending { background: #fef3c7; color: #92400e; }
-.aqi-amt { font-size: 11px; font-weight: 800; color: #0f172a; }
-.app-create-btn { background: #0d1e6e; color: white; border-radius: 10px; padding: 9px; text-align: center; font-size: 10px; font-weight: 700; margin-top: auto; }
-
-/* Floating badges */
-.float-badge {
-  position: absolute; display: flex; align-items: center; gap: 10px;
-  background: rgba(13,21,37,.9); backdrop-filter: blur(20px);
-  border: 1px solid var(--border-hi); border-radius: 14px;
-  padding: 10px 16px; z-index: 3; white-space: nowrap;
-}
-.badge-1 { right: -50px; top: 80px; animation: float1 4s ease-in-out infinite; }
-.badge-2 { left: -60px; bottom: 100px; animation: float2 5s ease-in-out infinite; }
-@keyframes float1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-@keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
-.fb-icon { font-size: 18px; }
-.fb-title { display: block; font-size: 11px; font-weight: 700; color: var(--text-1); }
-.fb-sub { display: block; font-size: 10px; color: var(--text-3); margin-top: 1px; }
-
-.hero-scroll-cue {
-  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  z-index: 10;
-}
-.scroll-line {
-  width: 1px; height: 50px;
-  background: linear-gradient(to bottom, transparent, var(--border-hi));
-  animation: scrollpulse 2s infinite;
-}
-@keyframes scrollpulse { 0%,100%{opacity:.3;transform:scaleY(.8)} 50%{opacity:1;transform:scaleY(1)} }
-.hero-scroll-cue span { font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-3); }
-
-/* ---- MARQUEE ---- */
-.marquee-band {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--surface); padding: 18px 0; overflow: hidden;
-}
-.marquee-track { display: flex; }
-.marquee-items {
-  display: flex; align-items: center; gap: 24px; flex-shrink: 0;
-  animation: marquee 30s linear infinite;
-  padding-right: 24px;
-}
-.marquee-items span { font-size: 12px; font-weight: 600; color: var(--text-3); white-space: nowrap; text-transform: uppercase; letter-spacing: 1px; }
-.marquee-dot { color: var(--green) !important; font-size: 8px !important; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-/* ---- SERVICES ---- */
-.services { padding: 120px 0; }
-.services-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-}
-.svc-card {
-  background: var(--surface); padding: 40px 32px;
-  position: relative; overflow: hidden; cursor: default;
-  transition: background .4s, transform .4s var(--ease);
-  border: 1px solid var(--border);
-  border-radius: 0;
-}
-.svc-card::after {
-  content: attr(data-num);
-  position: absolute; top: 24px; right: 28px;
-  font-family: var(--font-display); font-size: 56px; font-weight: 700;
-  color: rgba(255,255,255,.03); line-height: 1;
-  transition: color .4s, transform .4s var(--ease);
-}
-.svc-card:hover { background: var(--surface-2); transform: translateY(-2px); z-index: 2; }
-.svc-card:hover::after { color: rgba(16,232,122,.06); transform: scale(1.1); }
-.svc-card:first-child { border-radius: var(--radius-sm) 0 0 0; }
-.svc-card:nth-child(3) { border-radius: 0 var(--radius-sm) 0 0; }
-.svc-card:nth-child(4) { border-radius: 0 0 0 var(--radius-sm); }
-.svc-card:last-child { border-radius: 0 0 var(--radius-sm) 0; }
-
-.svc-icon {
-  width: 48px; height: 48px; color: var(--green);
-  margin-bottom: 24px; transition: transform .4s var(--ease);
-}
-.svc-card:hover .svc-icon { transform: scale(1.1); }
-.svc-card h3 { font-size: 19px; font-weight: 700; color: var(--text-1); margin-bottom: 12px; letter-spacing: -.3px; }
-.svc-card p { font-size: 14px; color: var(--text-2); line-height: 1.7; margin-bottom: 20px; }
-.svc-card ul { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-bottom: 28px; }
-.svc-card ul li { font-size: 13px; color: var(--text-3); display: flex; align-items: center; gap: 10px; }
-.svc-card ul li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green); flex-shrink: 0; opacity: .7; }
-.svc-link { font-size: 13px; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 6px; transition: gap .3s var(--ease); }
-.svc-link:hover { gap: 10px; }
-
-/* ---- WORK / PORTFOLIO ---- */
-.work { padding: 120px 0 0; }
-.project-block { padding: 80px 0; border-top: 1px solid var(--border); }
-.project-block.alt { background: var(--surface); }
-
-.project-inner {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 70px; align-items: center;
-}
-.project-block.alt .project-inner { direction: rtl; }
-.project-block.alt .project-inner > * { direction: ltr; }
-
-/* Project phone */
-.proj-phone { position: relative; display: flex; justify-content: center; }
-.proj-phone-frame {
-  width: 220px; height: 430px; border-radius: 38px;
-  border: 1.5px solid rgba(255,255,255,.1);
-  overflow: hidden; position: relative; z-index: 2;
-  box-shadow: 0 32px 64px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.07);
-}
-.proj-phone-glow {
-  position: absolute; inset: -30px; border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(37,99,235,.25) 0%, transparent 70%);
-  pointer-events: none; z-index: 0;
-}
-.proj-phone-glow.green { background: radial-gradient(ellipse, rgba(16,232,122,.2) 0%, transparent 70%); }
-.proj-phone-glow.cyan { background: radial-gradient(ellipse, rgba(34,211,238,.2) 0%, transparent 70%); }
-
-/* Quotation screen */
-.proj-screen { height: 100%; display: flex; flex-direction: column; }
-.quotation-screen { background: #f0f3fb; }
-.qs-header { background: linear-gradient(135deg, #0d1e6e, #1a3aab); padding: 24px 16px 16px; }
-.qs-title { font-size: 14px; font-weight: 800; color: white; }
-.qs-subtitle { font-size: 10px; color: rgba(255,255,255,.6); margin-top: 2px; }
-.qs-card { margin: 12px; background: linear-gradient(135deg, #0d1e6e, #2d47a0); border-radius: 14px; padding: 16px; }
-.qs-label { font-size: 9px; color: rgba(255,255,255,.6); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; display: block; }
-.qs-big { font-size: 26px; font-weight: 800; color: white; margin-bottom: 8px; }
-.qs-pills { display: flex; gap: 6px; }
-.qsp { font-size: 8px; font-weight: 700; padding: 3px 8px; border-radius: 100px; }
-.qsp.approved { background: rgba(16,232,122,.2); color: #10e87a; }
-.qsp.pending { background: rgba(245,158,11,.2); color: #f59e0b; }
-.qs-list { margin: 0 12px; display: flex; flex-direction: column; gap: 6px; }
-.qs-item { background: white; border-radius: 10px; padding: 9px 12px; display: flex; justify-content: space-between; align-items: center; font-size: 9px; }
-.qs-num { font-weight: 700; color: #0d1e6e; }
-.qs-name { color: #64748b; flex: 1; margin-left: 6px; }
-.qs-tag { font-size: 12px; }
-.qs-btn { margin: 12px; margin-top: auto; background: #0d1e6e; color: white; border-radius: 10px; padding: 10px; text-align: center; font-size: 10px; font-weight: 800; }
-
-/* Kumusha screen */
-.kumusha-screen { background: #052e16; display: flex; flex-direction: column; padding-bottom: 12px; }
-.kms-header { background: linear-gradient(135deg, #052e16, #065f46); padding: 24px 16px 12px; }
-.kms-title { font-size: 14px; font-weight: 800; color: white; }
-.kms-hero { display: flex; align-items: center; gap: 12px; padding: 16px; }
-.kms-char { font-size: 48px; }
-.kms-speech { background: rgba(16,232,122,.15); border: 1px solid rgba(16,232,122,.3); color: #10e87a; font-size: 12px; font-weight: 700; padding: 8px 12px; border-radius: 12px; border-top-left-radius: 0; }
-.kms-progress { padding: 0 16px 12px; }
-.kms-prog-label { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
-.kms-prog-bar { height: 5px; background: rgba(255,255,255,.1); border-radius: 3px; overflow: hidden; }
-.kms-prog-fill { height: 100%; background: linear-gradient(90deg, #10e87a, #22d3ee); border-radius: 3px; }
-.kms-modules { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; padding: 0 12px; }
-.kms-mod { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 10px; padding: 10px 8px; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 9px; color: rgba(255,255,255,.7); font-weight: 600; }
-.kms-mod.active { background: rgba(16,232,122,.15); border-color: rgba(16,232,122,.3); color: #10e87a; }
-.kms-badge { margin: 12px; background: rgba(245,158,11,.15); border: 1px solid rgba(245,158,11,.3); color: #f59e0b; font-size: 10px; font-weight: 700; text-align: center; padding: 8px; border-radius: 10px; }
-
-/* School screen */
-.school-screen { background: #07101e; padding: 0; }
-.schs-header { background: linear-gradient(135deg, #07101e, #0f2040); padding: 24px 16px 12px; border-bottom: 1px solid rgba(255,255,255,.06); }
-.schs-title { font-size: 14px; font-weight: 800; color: white; }
-.schs-sub { font-size: 10px; color: rgba(255,255,255,.4); margin-top: 2px; }
-.schs-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; padding: 12px; }
-.schs-stat { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); border-radius: 10px; padding: 12px 10px; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.ss-n { font-size: 20px; font-weight: 800; color: var(--cyan); font-family: var(--font-display); }
-.ss-l { font-size: 8px; font-weight: 600; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .5px; }
-.schs-menu { display: flex; flex-direction: column; padding: 0 12px; gap: 4px; }
-.sm-row { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06); border-radius: 10px; padding: 11px 14px; display: flex; align-items: center; gap: 10px; font-size: 11px; color: rgba(255,255,255,.7); font-weight: 600; }
-.sm-arrow { margin-left: auto; color: rgba(255,255,255,.25); }
-
-/* Browser mockup */
-.proj-browser {
-  border-radius: 14px; overflow: hidden;
-  border: 1.5px solid rgba(255,255,255,.1);
-  box-shadow: 0 32px 64px rgba(0,0,0,.5);
-}
-.browser-chrome { background: #1a2235; padding: 12px 16px; display: flex; align-items: center; gap: 12px; }
-.bc-dots { display: flex; gap: 6px; }
-.bc-dots span { width: 10px; height: 10px; border-radius: 50%; }
-.bc-dots span:nth-child(1) { background: #ff5f57; }
-.bc-dots span:nth-child(2) { background: #febc2e; }
-.bc-dots span:nth-child(3) { background: #28c840; }
-.bc-bar { flex: 1; background: rgba(255,255,255,.06); color: rgba(255,255,255,.3); font-size: 10px; padding: 4px 12px; border-radius: 6px; }
-.proj-browser-screen { background: #0f172a; padding: 20px; }
-.pbs-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,.06); }
-.pbs-logo { font-size: 13px; font-weight: 800; color: white; }
-.pbs-links { font-size: 10px; color: rgba(255,255,255,.3); }
-.pbs-hero { margin-bottom: 20px; }
-.pbs-tag { display: inline-block; background: #f59e0b; color: white; font-size: 9px; font-weight: 800; padding: 3px 10px; border-radius: 100px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .5px; }
-.pbs-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: white; line-height: 1.15; }
-.pbs-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 12px; display: flex; align-items: center; gap: 12px; }
-.pbs-card-icon { font-size: 22px; }
-.pbs-card-title { font-size: 11px; font-weight: 700; color: rgba(255,255,255,.85); }
-.pbs-card-sub { font-size: 9px; color: rgba(255,255,255,.35); margin-top: 2px; }
-
-/* Project info */
-.project-info { padding: 20px 0; }
-.proj-index { font-family: var(--font-display); font-size: 64px; font-weight: 700; color: rgba(255,255,255,.06); line-height: 1; margin-bottom: -10px; }
-.proj-cat { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
-.project-info h3 { font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); color: var(--text-1); margin-bottom: 18px; line-height: 1.1; letter-spacing: -1px; }
-.project-info p { font-size: 16px; color: var(--text-2); line-height: 1.75; margin-bottom: 24px; }
-.proj-features { display: flex; flex-direction: column; gap: 9px; margin-bottom: 28px; }
-.pf-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-2); }
-.pf-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue-light); flex-shrink: 0; }
-.pf-dot.green { background: var(--green); }
-.pf-dot.cyan { background: var(--cyan); }
-.pf-dot.gold { background: var(--gold); }
-.proj-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.proj-tags span { font-size: 12px; font-weight: 600; color: var(--text-3); background: var(--surface); border: 1px solid var(--border-hi); padding: 5px 13px; border-radius: 100px; }
-
-/* ---- WHY US ---- */
-.why-us { padding: 120px 0; background: var(--surface); }
-.why-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
-.why-card {
-  background: var(--bg); padding: 40px 28px;
-  border: 1px solid var(--border); position: relative;
-  transition: background .4s, transform .4s var(--ease);
-  overflow: hidden;
-}
-.why-card:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
-.why-card:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
-.why-card::before {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-  background: linear-gradient(90deg, var(--green), var(--blue-light));
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .5s var(--ease);
-}
-.why-card:hover::before { transform: scaleX(1); }
-.why-card:hover { background: var(--surface-2); transform: translateY(-4px); z-index: 2; }
-.why-number { font-family: var(--font-display); font-size: 48px; font-weight: 700; color: rgba(255,255,255,.04); line-height: 1; margin-bottom: -4px; }
-.why-icon { font-size: 32px; margin-bottom: 16px; }
-.why-card h4 { font-size: 16px; font-weight: 700; color: var(--text-1); margin-bottom: 10px; }
-.why-card p { font-size: 14px; color: var(--text-2); line-height: 1.7; }
-
-/* ---- ABOUT ---- */
-.about { padding: 120px 0; }
-.about-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
-
-.about-brand-card {
-  background: var(--surface); border: 1px solid var(--border-hi);
-  border-radius: var(--radius-lg); padding: 48px 40px; text-align: center;
-  position: relative; overflow: hidden;
-}
-.abc-glow {
-  position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-  width: 300px; height: 300px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(37,99,235,.2), transparent 70%);
-  pointer-events: none;
-}
-.abc-logo { display: flex; justify-content: center; margin-bottom: 20px; position: relative; z-index: 1; }
-.abc-name { font-family: var(--font-body); font-size: 22px; font-weight: 800; color: var(--text-1); letter-spacing: -.4px; position: relative; z-index: 1; }
-.abc-full { font-size: 13px; color: var(--text-3); margin-top: 3px; position: relative; z-index: 1; }
-.abc-tag { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 2px; margin-top: 12px; position: relative; z-index: 1; }
-.abc-country { font-size: 14px; color: var(--text-3); margin-top: 8px; position: relative; z-index: 1; }
-.abc-stats { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); position: relative; z-index: 1; }
-.abcs { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.abcs span { font-family: var(--font-display); font-size: 26px; font-weight: 700; color: var(--text-1); }
-.abcs { font-size: 11px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: .5px; }
-.abcs-div { width: 1px; height: 32px; background: var(--border-hi); }
-
-.about-right p { font-size: 16px; color: var(--text-2); line-height: 1.8; margin-bottom: 16px; }
-.about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
-.av { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--text-2); background: var(--surface); border: 1px solid var(--border); padding: 12px 16px; border-radius: 10px; }
-.av-icon { font-size: 16px; }
-
-/* ---- CONTACT ---- */
-.contact { padding: 120px 0; background: var(--surface); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 56px; margin-top: 60px; }
-
-.cinfo-card {
-  background: var(--bg); border: 1px solid var(--border-hi);
-  border-radius: var(--radius-lg); padding: 40px 32px;
-  height: fit-content;
-}
-.cinfo-card h3 { font-family: var(--font-display); font-size: 28px; color: var(--text-1); margin-bottom: 28px; }
-.cinfo-items { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
-.cinfo-item { display: flex; align-items: center; gap: 16px; padding: 14px; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); transition: border-color .3s, background .3s; }
-.cinfo-item:hover { border-color: var(--border-hi); background: var(--surface-2); }
-.ci-ico { font-size: 20px; width: 40px; text-align: center; }
-.ci-label { display: block; font-size: 11px; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 2px; }
-.ci-value { display: block; font-size: 14px; font-weight: 600; color: var(--text-1); }
-
-.whatsapp-btn {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  background: var(--wa); color: white;
-  padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 700;
-  cursor: pointer; transition: transform .3s var(--ease), box-shadow .3s;
-}
-.whatsapp-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,.35); }
-
-/* Contact form */
-.contact-form { background: var(--bg); border: 1px solid var(--border-hi); border-radius: var(--radius-lg); padding: 40px 36px; }
-.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.fg { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
-.fg label { font-size: 12px; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: .5px; }
-.fg input, .fg select, .fg textarea {
-  background: var(--surface); border: 1px solid var(--border-hi);
-  border-radius: 10px; padding: 13px 16px;
-  font-family: var(--font-body); font-size: 14px; color: var(--text-1);
-  outline: none; transition: border-color .3s, box-shadow .3s;
-}
-.fg input::placeholder, .fg textarea::placeholder { color: var(--text-3); }
-.fg input:focus, .fg select:focus, .fg textarea:focus {
-  border-color: var(--green); box-shadow: 0 0 0 3px var(--green-dim);
-}
-.fg select { -webkit-appearance: none; cursor: pointer; }
-.fg textarea { resize: vertical; min-height: 120px; }
-.form-submit {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  width: 100%; background: var(--green); color: #061a0e;
-  padding: 15px; border-radius: 100px; border: none;
-  font-family: var(--font-body); font-size: 15px; font-weight: 700;
-  cursor: pointer; position: relative; overflow: hidden;
-  transition: transform .3s var(--ease), box-shadow .3s;
-}
-.form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 32px var(--green-glow); }
-
-.form-success {
-  display: none; align-items: center; gap: 14px;
-  margin-top: 16px; padding: 16px; border-radius: 12px;
-  background: rgba(16,232,122,.08); border: 1px solid rgba(16,232,122,.2);
-}
-.form-success span:first-child { font-size: 24px; }
-.form-success strong { display: block; font-size: 14px; font-weight: 700; color: var(--green); }
-.form-success span:last-child { font-size: 13px; color: var(--text-2); }
-
-/* ---- FOOTER ---- */
-.footer { background: #04070f; padding: 72px 0 32px; border-top: 1px solid var(--border); }
-.footer-main { display: grid; grid-template-columns: 1.2fr 2fr; gap: 60px; margin-bottom: 52px; }
-.footer-brand p { font-size: 14px; color: var(--text-3); line-height: 1.7; max-width: 280px; margin: 16px 0 20px; }
-.footer-logo { display: flex; align-items: center; gap: 12px; }
-.fl-name { font-size: 17px; font-weight: 800; color: var(--text-1); }
-.fl-sub { font-size: 10px; color: var(--text-3); margin-top: 2px; }
-.footer-contact-quick { display: flex; flex-direction: column; gap: 6px; }
-.footer-contact-quick a { font-size: 13px; color: var(--text-3); transition: color .2s; }
-.footer-contact-quick a:hover { color: var(--green); }
-.footer-links-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; }
-.fl-col { display: flex; flex-direction: column; gap: 12px; }
-.fl-col h5 { font-size: 11px; font-weight: 700; color: var(--text-1); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px; }
-.fl-col a { font-size: 13px; color: var(--text-3); transition: color .2s; }
-.fl-col a:hover { color: var(--green); }
-.footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--text-3); }
-
-/* ---- LOGO IMAGES ---- */
-
-/* Navbar logo — show real logo, crop to the icon+text area cleanly */
-.nav-logo-img {
-  height: 44px;
-  width: auto;
-  /* The logo PNG has a light grey background — we use mix-blend-mode 
-     to make it composited cleanly on the dark navbar */
-  border-radius: 8px;
-  object-fit: contain;
-  transition: opacity .25s;
-  /* Give it a frosted pill backing so it reads on dark */
-  background: rgba(255,255,255,.92);
-  padding: 4px 10px;
-  border-radius: 10px;
-}
-.nav-logo-img:hover { opacity: .9; }
-/* Remove old logo-text styles when real image is used */
-.nav-logo .logo-text, .nav-logo .logo-icon { display: none; }
-
-/* About section — full logo on white card (logo background is light grey) */
-.about-brand-card {
-  background: #ffffff !important;
-  border: 1px solid rgba(0,0,0,.07) !important;
-}
-.abc-glow {
-  background: radial-gradient(circle, rgba(16,232,122,.12) 0%, transparent 70%) !important;
-}
-.abc-logo-wrap {
-  display: flex; justify-content: center;
-  margin-bottom: 16px;
-}
-.abc-logo-img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-}
-/* Adjust text colours on white card */
-.about-brand-card .abc-country { color: #475569; }
-.about-brand-card .abc-stats { border-color: rgba(0,0,0,.08); }
-.about-brand-card .abcs span { color: #0f172a; }
-.about-brand-card .abcs { color: #64748b; }
-.about-brand-card .abcs-div { background: rgba(0,0,0,.1); }
-
-/* Footer logo — pill container so it shows on dark background */
-.footer-logo-img {
-  height: 52px;
-  width: auto;
-  object-fit: contain;
-  background: rgba(255,255,255,.92);
-  padding: 6px 14px;
-  border-radius: 12px;
-  display: block;
-  margin-bottom: 12px;
-}
-/* Hide old footer logo text elements */
-.footer-logo .fl-name, .footer-logo .fl-sub { display: none; }
-.footer-logo { flex-direction: column; align-items: flex-start; gap: 0; }
-
-/* ---- APK DOWNLOAD BUTTON ---- */
-.proj-download {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 24px;
-  flex-wrap: wrap;
-}
-.btn-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border: 1.5px solid var(--green);
-  color: var(--green);
-  border-radius: 10px;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: .3px;
-  transition: background .2s, color .2s, box-shadow .2s;
-}
-.btn-download:hover {
-  background: var(--green);
-  color: #000;
-  box-shadow: 0 0 18px rgba(16,232,122,.35);
-}
-.btn-download-note {
-  font-size: 12px;
-  color: var(--text-3);
-  font-family: var(--font-body);
-}
-
-/* ---- MAGNETIC BUTTON ---- */
-.magnetic { display: inline-flex; position: relative; }
-
-/* ---- FLOATING WHATSAPP BUTTON ---- */
-.wa-float {
-  position: fixed; bottom: 28px; right: 28px; z-index: 800;
-  background: #25d366; color: white;
-  display: flex; align-items: center; gap: 10px;
-  padding: 13px 22px; border-radius: 100px;
-  font-family: var(--font-body); font-size: 14px; font-weight: 700;
-  box-shadow: 0 4px 24px rgba(37,211,102,.4);
-  transition: transform .3s var(--ease), box-shadow .3s;
-  text-decoration: none; white-space: nowrap;
-}
-.wa-float:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,.5); }
-.wa-float svg { flex-shrink: 0; }
-
-/* ---- APPS HOME SECTION ---- */
-.apps-home { padding: 120px 0; }
-.apps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
-.app-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); overflow: hidden;
-  transition: transform .4s var(--ease), box-shadow .4s, border-color .3s;
-  display: flex; flex-direction: column;
-}
-.app-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.4); border-color: var(--border-hi); }
-.app-card-screen {
-  height: 160px; padding: 16px;
-  display: flex; flex-direction: column; gap: 10px; overflow: hidden;
-}
-.app-card-screen.qp-screen  { background: linear-gradient(135deg,#0d1e6e,#1a3aab); }
-.app-card-screen.ss-screen  { background: linear-gradient(135deg,#052e16,#064e33); }
-.app-card-screen.wf-screen  { background: linear-gradient(135deg,#0c1445,#1e3a7a); }
-.app-card-screen.sch-screen { background: linear-gradient(135deg,#1a0533,#3b0764); }
-.acs-header { display: flex; justify-content: space-between; align-items: center; }
-.acs-title  { font-size: 12px; font-weight: 800; color: rgba(255,255,255,.9); }
-.acs-icon   { font-size: 16px; }
-.acs-stat-num   { font-size: 22px; font-weight: 800; color: white; font-family: var(--font-display); }
-.acs-stat-label { font-size: 9px; color: rgba(255,255,255,.5); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
-.acs-rows { display: flex; flex-direction: column; gap: 4px; margin-top: auto; }
-.acs-row {
-  display: flex; justify-content: space-between; align-items: center;
-  background: rgba(255,255,255,.08); border-radius: 6px;
-  padding: 5px 8px; font-size: 9px; color: rgba(255,255,255,.7);
-}
-.acs-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.acs-dot.g { background: var(--green); }
-.acs-dot.a { background: var(--gold); }
-.acs-vouchers { display: flex; flex-direction: column; gap: 5px; }
-.acs-voucher {
-  display: flex; justify-content: space-between; align-items: center;
-  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1);
-  border-radius: 6px; padding: 6px 10px;
-}
-.acs-voucher.act { background: rgba(16,232,122,.15); border-color: rgba(16,232,122,.3); }
-.acs-v-code { font-size: 10px; font-weight: 800; color: white; font-family: monospace; }
-.acs-v-dur  { font-size: 9px; color: rgba(255,255,255,.5); font-weight: 600; }
-.acs-voucher.act .acs-v-dur { color: var(--green); }
-.acs-school-stats { display: flex; gap: 6px; }
-.acs-ss { display: flex; flex-direction: column; align-items: center; flex: 1; background: rgba(255,255,255,.08); border-radius: 8px; padding: 8px 4px; }
-.acs-ss-n { font-size: 15px; font-weight: 800; color: white; font-family: var(--font-display); }
-.acs-ss-l { font-size: 8px; color: rgba(255,255,255,.5); font-weight: 600; text-transform: uppercase; letter-spacing: .3px; margin-top: 2px; }
-.app-card-body { padding: 20px 20px 24px; flex: 1; display: flex; flex-direction: column; }
-.app-card-tag  { font-size: 10px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
-.app-card-body h3 { font-size: 17px; font-weight: 700; color: var(--text-1); margin-bottom: 9px; letter-spacing: -.3px; line-height: 1.2; }
-.app-card-body p  { font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; flex: 1; }
-.apps-home-cta { display: flex; gap: 16px; justify-content: center; align-items: center; margin-top: 56px; flex-wrap: wrap; }
-
-/* ---- RESPONSIVE ---- */
-@media (max-width: 1024px) {
-  .hero-content { grid-template-columns: 1fr; padding-top: 100px; text-align: center; }
-  .hero-left { order: 2; }
-  .hero-right { order: 1; }
-  .hero-body { margin: 0 auto 36px; }
-  .hero-actions { justify-content: center; }
-  .hero-stats { justify-content: center; }
-  .hero-scroll-cue { display: none; }
-  .badge-1 { right: -20px; top: 50px; }
-  .badge-2 { left: -20px; bottom: 60px; }
-  .services-grid { grid-template-columns: repeat(2,1fr); }
-  .svc-card:nth-child(n) { border-radius: 0; }
-  .why-grid { grid-template-columns: repeat(2,1fr); }
-  .why-card:nth-child(n) { border-radius: 0; }
-  .about-inner { grid-template-columns: 1fr; gap: 50px; }
-  .footer-main { grid-template-columns: 1fr; }
-  .apps-grid { grid-template-columns: repeat(2,1fr); }
-}
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .services-grid { grid-template-columns: 1fr; }
-  .project-inner, .project-block.alt .project-inner { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
-  .proj-phone, .proj-browser { display: flex; justify-content: center; }
-  .why-grid { grid-template-columns: 1fr 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .form-row-2 { grid-template-columns: 1fr; }
-  .about-values { grid-template-columns: 1fr; }
-  .footer-links-grid { grid-template-columns: repeat(2,1fr); }
-  .apps-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  .why-grid { grid-template-columns: 1fr; }
-  .footer-links-grid { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .float-badge { display: none; }
-  .hero-device { transform: scale(.85); }
-  .hero-eyebrow { font-size: 11px; padding: 6px 14px; }
-  .abc-stats { gap: 12px; }
-  .wa-float .wa-float-text { display: none; }
-  .wa-float { padding: 14px; border-radius: 50%; width: 52px; height: 52px; justify-content: center; }
-}
-
-</style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="home.css"/>
+  <script src="home.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursor-follower"></div>
-
-  <!-- Noise overlay -->
-  <div class="noise-overlay"></div>
-
-  <!-- NAVBAR -->
-  <header id="navbar">
-    <nav class="nav-inner container">
-      <a href="#" class="nav-logo" data-cursor="logo">
-        <img src="logo.png" alt="Freshinnov Labs" class="nav-logo-img"/>
+  <header class="site-header" id="site-header">
+    <nav class="nav-shell container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Freshinnov Labs home">
+        <span class="brand-mark">
+          <img src="assets/freshinnov-logo.jpg" alt="" width="96" height="54" decoding="async"/>
+        </span>
+        <span class="brand-copy">
+          <strong>Freshinnov Labs</strong>
+          <span>Zimbabwe software agency</span>
+        </span>
       </a>
-      <div class="nav-links">
-        <a href="#services" class="nav-link">Services</a>
-        <a href="apps.html" class="nav-link">Apps</a>
-        <a href="#work" class="nav-link">Portfolio</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="nav-link nav-wa">
-          <svg viewBox="0 0 24 24" width="14" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp
-        </a>
-        <a href="#contact" class="nav-cta magnetic" data-cursor="cta">
-          <span>Start a Project</span>
-          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span class="sr-only">Open menu</span>
       </button>
+
+      <div class="desktop-nav">
+        <a href="#services">Solutions</a>
+        <a href="#work">Projects</a>
+        <a href="#quotepro">QuotePro</a>
+        <a href="#about">Trust</a>
+        <a class="nav-whatsapp" href="https://wa.me/263775364959" target="_blank" rel="noopener">WhatsApp</a>
+        <button class="button button-primary button-compact" type="button" data-open-lead>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <span>Get Website</span>
+        </button>
+      </div>
     </nav>
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#services" class="mob-link">Services</a>
-      <a href="apps.html" class="mob-link">Apps</a>
-      <a href="#work" class="mob-link">Portfolio</a>
-      <a href="#about" class="mob-link">About</a>
-      <a href="#contact" class="mob-link">Contact</a>
-      <a href="https://wa.me/263775364959" target="_blank" class="mob-cta">💬 WhatsApp Us</a>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="container mobile-menu-inner">
+        <a href="#services">Solutions</a>
+        <a href="#work">Projects</a>
+        <a href="#quotepro">QuotePro</a>
+        <a href="#about">Trust</a>
+        <a href="https://wa.me/263775364959" target="_blank" rel="noopener">WhatsApp Us</a>
+        <button class="button button-primary" type="button" data-open-lead>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <span>Get Website - $50</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <canvas id="particle-canvas"></canvas>
-    <div class="hero-glow glow-1"></div>
-    <div class="hero-glow glow-2"></div>
-    <div class="hero-glow glow-3"></div>
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <p class="eyebrow">Zimbabwe websites, apps and business software</p>
+          <h1>Build Websites, Apps &amp; Digital Solutions for Zimbabwe Businesses</h1>
+          <p class="hero-subtitle">We help businesses grow through websites, mobile apps, school systems and business software.</p>
 
-    <div class="hero-content container">
-      <div class="hero-left">
-        <div class="hero-eyebrow reveal-up" style="--delay:.1s">
-          <span class="flag">🇿🇼</span>
-          <span>Zimbabwe's Premier Software Studio</span>
-          <span class="eyebrow-dot"></span>
-        </div>
-        <h1 class="hero-headline">
-          <span class="reveal-line" style="--delay:.2s">We Build</span>
-          <span class="reveal-line italic" style="--delay:.35s">Digital Tools</span>
-          <span class="reveal-line" style="--delay:.5s">That Power</span>
-          <span class="reveal-line gradient-words" style="--delay:.65s">African Business</span>
-        </h1>
-        <p class="hero-body reveal-up" style="--delay:.8s">
-          From mobile apps to full web platforms — Freshinnov Labs turns your biggest business challenges into elegant, powerful software. Trusted by SMEs, schools, and organisations across Zimbabwe.
-        </p>
-        <div class="hero-actions reveal-up" style="--delay:.95s">
-          <a href="#work" class="btn-primary magnetic">
-            <span>See Our Work</span>
-            <div class="btn-shine"></div>
-          </a>
-          <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="btn-ghost">
-            <svg viewBox="0 0 24 24" width="16" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            +263 77 536 4959
-          </a>
-        </div>
-        <div class="hero-stats reveal-up" style="--delay:1.1s">
-          <div class="hstat">
-            <span class="hstat-num" data-count="4">0</span>
-            <span class="hstat-plus">+</span>
-            <span class="hstat-label">Apps Shipped</span>
-          </div>
-          <div class="hstat-div"></div>
-          <div class="hstat">
-            <span class="hstat-num" data-count="50">0</span>
-            <span class="hstat-plus">+</span>
-            <span class="hstat-label">Businesses Served</span>
-          </div>
-          <div class="hstat-div"></div>
-          <div class="hstat">
-            <span class="hstat-num" data-count="100">0</span>
-            <span class="hstat-plus">%</span>
-            <span class="hstat-label">Local Expertise</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-right reveal-up" style="--delay:.6s">
-        <div class="hero-device" id="hero-device">
-          <div class="device-glow"></div>
-          <div class="device-frame">
-            <div class="device-notch"></div>
-            <div class="device-screen">
-              <!-- Quotation App UI -->
-              <div class="app-preview">
-                <div class="app-topbar">
-                  <div class="app-topbar-inner">
-                    <div class="app-topbar-title">Quotation Pro</div>
-                    <div class="app-topbar-icon">
-                      <svg viewBox="0 0 20 20" fill="none" width="16"><circle cx="10" cy="7" r="3" stroke="white" stroke-width="1.5"/><path d="M3 17c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="app-content">
-                  <div class="app-summary">
-                    <div class="app-sum-card">
-                      <span class="sum-label">Total Revenue</span>
-                      <span class="sum-val">$5,300</span>
-                    </div>
-                  </div>
-                  <div class="app-list-title">Recent Quotes</div>
-                  <div class="app-quote-item">
-                    <div class="aqi-left">
-                      <div class="aqi-id">#1023</div>
-                      <div class="aqi-client">Nexus Corp</div>
-                    </div>
-                    <div class="aqi-right">
-                      <div class="aqi-badge approved">Approved</div>
-                      <div class="aqi-amt">$1,500</div>
-                    </div>
-                  </div>
-                  <div class="app-quote-item">
-                    <div class="aqi-left">
-                      <div class="aqi-id">#1022</div>
-                      <div class="aqi-client">Bright Media</div>
-                    </div>
-                    <div class="aqi-right">
-                      <div class="aqi-badge approved">Approved</div>
-                      <div class="aqi-amt">$1,500</div>
-                    </div>
-                  </div>
-                  <div class="app-quote-item">
-                    <div class="aqi-left">
-                      <div class="aqi-id">#1021</div>
-                      <div class="aqi-client">TechStart Ltd</div>
-                    </div>
-                    <div class="aqi-right">
-                      <div class="aqi-badge pending">Pending</div>
-                      <div class="aqi-amt">$2,300</div>
-                    </div>
-                  </div>
-                  <div class="app-create-btn">
-                    <span>+</span> Create Quote
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Floating badges -->
-          <div class="float-badge badge-1">
-            <span class="fb-icon">✅</span>
-            <div class="fb-text">
-              <span class="fb-title">Quote Approved</span>
-              <span class="fb-sub">$1,500 · Nexus Corp</span>
-            </div>
-          </div>
-          <div class="float-badge badge-2">
-            <span class="fb-icon">📄</span>
-            <div class="fb-text">
-              <span class="fb-title">PDF Generated</span>
-              <span class="fb-sub">Shared via WhatsApp</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-scroll-cue">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-band">
-    <div class="marquee-track">
-      <div class="marquee-items">
-        <span>Mobile App Development</span><span class="marquee-dot">◆</span>
-        <span>Website Design</span><span class="marquee-dot">◆</span>
-        <span>School Management Systems</span><span class="marquee-dot">◆</span>
-        <span>UI/UX Design</span><span class="marquee-dot">◆</span>
-        <span>Android Development</span><span class="marquee-dot">◆</span>
-        <span>Custom Software</span><span class="marquee-dot">◆</span>
-        <span>IT Consulting</span><span class="marquee-dot">◆</span>
-        <span>Cloud Hosting</span><span class="marquee-dot">◆</span>
-        <span>PDF Generation</span><span class="marquee-dot">◆</span>
-        <span>WhatsApp Integration</span><span class="marquee-dot">◆</span>
-        <!-- Duplicate -->
-        <span>Mobile App Development</span><span class="marquee-dot">◆</span>
-        <span>Website Design</span><span class="marquee-dot">◆</span>
-        <span>School Management Systems</span><span class="marquee-dot">◆</span>
-        <span>UI/UX Design</span><span class="marquee-dot">◆</span>
-        <span>Android Development</span><span class="marquee-dot">◆</span>
-        <span>Custom Software</span><span class="marquee-dot">◆</span>
-        <span>IT Consulting</span><span class="marquee-dot">◆</span>
-        <span>Cloud Hosting</span><span class="marquee-dot">◆</span>
-        <span>PDF Generation</span><span class="marquee-dot">◆</span>
-        <span>WhatsApp Integration</span><span class="marquee-dot">◆</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-kicker scroll-reveal">What We Do</div>
-        <h2 class="section-title scroll-reveal" style="--sd:.1s">
-          Full-Spectrum<br/><em>IT Solutions</em>
-        </h2>
-        <p class="section-sub scroll-reveal" style="--sd:.2s">
-          We cover every layer of your digital needs — from first concept to ongoing maintenance.
-        </p>
-      </div>
-      <div class="services-grid">
-        <div class="svc-card scroll-reveal" style="--sd:0s" data-num="01">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48" fill="none"><rect x="12" y="4" width="24" height="40" rx="4" stroke="currentColor" stroke-width="2"/><rect x="16" y="10" width="16" height="20" rx="2" fill="currentColor" opacity=".15"/><circle cx="24" cy="38" r="2" fill="currentColor"/><line x1="18" y1="14" x2="30" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Mobile App Development</h3>
-          <p>Native Android apps built for Africa — offline-first, lightweight, and fast on low-end devices and slow networks.</p>
-          <ul>
-            <li>Business management apps</li>
-            <li>Customer-facing mobile apps</li>
-            <li>Education & EdTech apps</li>
-            <li>Play Store deployment</li>
-          </ul>
-          <a href="#contact" class="svc-link">Get started →</a>
-        </div>
-        <div class="svc-card scroll-reveal" style="--sd:.08s" data-num="02">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2"/><line x1="4" y1="18" x2="44" y2="18" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="38" x2="32" y2="38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="24" y1="38" x2="24" y2="44" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="14" r="1.5" fill="currentColor"/><circle cx="14" cy="14" r="1.5" fill="currentColor"/><circle cx="19" cy="14" r="1.5" fill="currentColor"/></svg>
-          </div>
-          <h3>Website Development</h3>
-          <p>Stunning, fast-loading websites that convert visitors into clients. Every site is fully responsive and SEO-ready.</p>
-          <ul>
-            <li>Corporate & business sites</li>
-            <li>E-commerce stores</li>
-            <li>Landing pages</li>
-            <li>Web portals & dashboards</li>
-          </ul>
-          <a href="#contact" class="svc-link">Get started →</a>
-        </div>
-        <div class="svc-card scroll-reveal" style="--sd:.16s" data-num="03">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M16 20l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="40" x2="42" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Custom Software</h3>
-          <p>Bespoke systems built around your exact workflow — school management, invoicing, inventory, HR and beyond.</p>
-          <ul>
-            <li>School management systems</li>
-            <li>Invoicing & quoting tools</li>
-            <li>Inventory management</li>
-            <li>HR & payroll systems</li>
-          </ul>
-          <a href="#contact" class="svc-link">Get started →</a>
-        </div>
-        <div class="svc-card scroll-reveal" style="--sd:.24s" data-num="04">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M24 8l4 8h8l-6.5 5 2.5 8L24 24l-8 5 2.5-8L12 16h8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="36" r="4" stroke="currentColor" stroke-width="2"/><line x1="24" y1="28" x2="24" y2="32" stroke="currentColor" stroke-width="2"/></svg>
-          </div>
-          <h3>UI/UX Design</h3>
-          <p>Interfaces that users love from day one. We obsess over every interaction, flow, and pixel.</p>
-          <ul>
-            <li>App & web design</li>
-            <li>Brand identity & logos</li>
-            <li>Prototyping & wireframes</li>
-            <li>Design systems</li>
-          </ul>
-          <a href="#contact" class="svc-link">Get started →</a>
-        </div>
-        <div class="svc-card scroll-reveal" style="--sd:.32s" data-num="05">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48" fill="none"><path d="M8 32c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 40c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="12" r="4" stroke="currentColor" stroke-width="2"/></svg>
-          </div>
-          <h3>Cloud & Hosting</h3>
-          <p>Reliable, fast hosting for your apps and websites — with domain management, backups, and 24/7 uptime monitoring.</p>
-          <ul>
-            <li>Web hosting & domains</li>
-            <li>Cloud deployment & DevOps</li>
-            <li>Database management</li>
-            <li>Ongoing maintenance</li>
-          </ul>
-          <a href="#contact" class="svc-link">Get started →</a>
-        </div>
-        <div class="svc-card scroll-reveal" style="--sd:.4s" data-num="06">
-          <div class="svc-icon">
-            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><path d="M24 16v8l6 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 12l4 2M38 12l-4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3>IT Consulting</h3>
-          <p>Strategic tech guidance for businesses navigating digital transformation — from system audits to full technology roadmaps.</p>
-          <ul>
-            <li>Technology strategy & roadmaps</li>
-            <li>System audits & reviews</li>
-            <li>Digital transformation</li>
-            <li>Staff training & support</li>
-          </ul>
-          <a href="#contact" class="svc-link">Get started →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPS SECTION -->
-  <section class="apps-home" id="apps">
-    <div class="container">
-      <div class="section-header centered">
-        <div class="section-kicker scroll-reveal">Our Products</div>
-        <h2 class="section-title scroll-reveal" style="--sd:.1s">Our Business<br/><em>Apps</em></h2>
-        <p class="section-sub scroll-reveal" style="--sd:.2s">We build powerful, easy-to-use business applications designed to help companies save time, manage operations, and grow faster.</p>
-      </div>
-      <div class="apps-grid">
-
-        <!-- QuotePro -->
-        <div class="app-card scroll-reveal" style="--sd:0s">
-          <div class="app-card-screen qp-screen">
-            <div class="acs-header">
-              <span class="acs-title">QuotePro</span>
-              <span class="acs-icon">📄</span>
-            </div>
-            <div>
-              <div class="acs-stat-num">$5,300</div>
-              <div class="acs-stat-label">Monthly Revenue</div>
-            </div>
-            <div class="acs-rows">
-              <div class="acs-row"><span>#1023 Nexus Corp</span><span class="acs-dot g"></span></div>
-              <div class="acs-row"><span>#1022 Bright Media</span><span class="acs-dot g"></span></div>
-              <div class="acs-row"><span>#1021 TechStart</span><span class="acs-dot a"></span></div>
-            </div>
-          </div>
-          <div class="app-card-body">
-            <div class="app-card-tag">Quotation &amp; Invoicing</div>
-            <h3>QuotePro</h3>
-            <p>Create professional quotations quickly and send them to customers instantly via WhatsApp or email.</p>
-            <a href="apps/quotepro.html" class="svc-link">Learn More →</a>
-          </div>
-        </div>
-
-        <!-- Shop Sales -->
-        <div class="app-card scroll-reveal" style="--sd:.08s">
-          <div class="app-card-screen ss-screen">
-            <div class="acs-header">
-              <span class="acs-title">Shop Sales</span>
-              <span class="acs-icon">🛒</span>
-            </div>
-            <div>
-              <div class="acs-stat-num" style="color:#10e87a">$840</div>
-              <div class="acs-stat-label">Today's Sales</div>
-            </div>
-            <div class="acs-rows">
-              <div class="acs-row"><span>Groceries</span><span style="color:#10e87a;font-weight:700">+$320</span></div>
-              <div class="acs-row"><span>Electronics</span><span style="color:#10e87a;font-weight:700">+$520</span></div>
-              <div class="acs-row"><span>Rent expense</span><span style="color:#f59e0b;font-weight:700">-$200</span></div>
-            </div>
-          </div>
-          <div class="app-card-body">
-            <div class="app-card-tag">Sales &amp; Expense Tracking</div>
-            <h3>Shop Sales App</h3>
-            <p>Record daily sales and expenses, even without internet. Know your profit every day.</p>
-            <a href="apps/shop-sales.html" class="svc-link">Learn More →</a>
-          </div>
-        </div>
-
-        <!-- WiFi Ticketing -->
-        <div class="app-card scroll-reveal" style="--sd:.16s">
-          <div class="app-card-screen wf-screen">
-            <div class="acs-header">
-              <span class="acs-title">WiFi Tickets</span>
-              <span class="acs-icon">📶</span>
-            </div>
-            <div class="acs-vouchers">
-              <div class="acs-voucher"><span class="acs-v-code">FI-2094</span><span class="acs-v-dur">1 Hour · $0.50</span></div>
-              <div class="acs-voucher act"><span class="acs-v-code">FI-2095</span><span class="acs-v-dur">24 Hours · $2</span></div>
-              <div class="acs-voucher"><span class="acs-v-code">FI-2096</span><span class="acs-v-dur">7 Days · $10</span></div>
-            </div>
-          </div>
-          <div class="app-card-body">
-            <div class="app-card-tag">WiFi Management</div>
-            <h3>WiFi Ticketing System</h3>
-            <p>Generate and manage WiFi access vouchers easily. Set time limits and track usage.</p>
-            <a href="apps/wifi-ticketing.html" class="svc-link">Learn More →</a>
-          </div>
-        </div>
-
-        <!-- School Management -->
-        <div class="app-card scroll-reveal" style="--sd:.24s">
-          <div class="app-card-screen sch-screen">
-            <div class="acs-header">
-              <span class="acs-title">School Mgr</span>
-              <span class="acs-icon">🎓</span>
-            </div>
-            <div class="acs-school-stats">
-              <div class="acs-ss"><span class="acs-ss-n">342</span><span class="acs-ss-l">Students</span></div>
-              <div class="acs-ss"><span class="acs-ss-n">18</span><span class="acs-ss-l">Classes</span></div>
-              <div class="acs-ss"><span class="acs-ss-n">94%</span><span class="acs-ss-l">Fees Paid</span></div>
-            </div>
-            <div class="acs-rows" style="margin-top:8px">
-              <div class="acs-row"><span>📚 Students</span><span>→</span></div>
-              <div class="acs-row"><span>💰 Fee Records</span><span>→</span></div>
-            </div>
-          </div>
-          <div class="app-card-body">
-            <div class="app-card-tag">Education Management</div>
-            <h3>School Management System</h3>
-            <p>Manage students, fees, and reports from one dashboard. Built for Zimbabwe schools.</p>
-            <a href="apps/school-management.html" class="svc-link">Learn More →</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="apps-home-cta scroll-reveal">
-        <a href="apps.html" class="btn-primary magnetic">
-          <span>View All Apps</span>
-          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          <div class="btn-shine"></div>
-        </a>
-        <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="btn-ghost">Request a Demo</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK / PORTFOLIO -->
-  <section class="work" id="work">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-kicker scroll-reveal">Portfolio</div>
-        <h2 class="section-title scroll-reveal" style="--sd:.1s">Products We've<br/><em>Shipped</em></h2>
-        <p class="section-sub scroll-reveal" style="--sd:.2s">Real tools. Real businesses. Real impact across Zimbabwe.</p>
-      </div>
-    </div>
-
-    <!-- Project 1: Quotation Pro -->
-    <div class="project-block">
-      <div class="container">
-        <div class="project-inner">
-          <div class="project-device scroll-reveal" style="--sd:0s">
-            <div class="proj-phone">
-              <div class="proj-phone-frame">
-                <div class="proj-screen quotation-screen">
-                  <div class="qs-header">
-                    <div class="qs-title">Quotation Pro</div>
-                    <div class="qs-subtitle">Quote Management</div>
-                  </div>
-                  <div class="qs-card">
-                    <div class="qs-label">Total This Month</div>
-                    <div class="qs-big">$5,300.00</div>
-                    <div class="qs-pills">
-                      <span class="qsp approved">4 Approved</span>
-                      <span class="qsp pending">1 Pending</span>
-                    </div>
-                  </div>
-                  <div class="qs-list">
-                    <div class="qs-item"><span class="qs-num">#1023</span><span class="qs-name">Nexus Corp</span><span class="qs-tag green">✓</span></div>
-                    <div class="qs-item"><span class="qs-num">#1022</span><span class="qs-name">Bright Media</span><span class="qs-tag green">✓</span></div>
-                    <div class="qs-item"><span class="qs-num">#1021</span><span class="qs-name">TechStart</span><span class="qs-tag amber">⏳</span></div>
-                  </div>
-                  <div class="qs-btn">+ New Quote</div>
-                </div>
-              </div>
-              <div class="proj-phone-glow"></div>
-            </div>
-          </div>
-          <div class="project-info scroll-reveal" style="--sd:.15s">
-            <div class="proj-index">01</div>
-            <div class="proj-cat">SME Productivity · Android App</div>
-            <h3>Quotation Pro</h3>
-            <p>A professional quoting and invoicing app designed specifically for Zimbabwean businesses. Business owners create beautiful, branded quotes in under 60 seconds, track approvals in real time, and share PDF invoices directly via WhatsApp or email.</p>
-            <div class="proj-features">
-              <div class="pf-item"><span class="pf-dot"></span>Create & send professional quotes instantly</div>
-              <div class="pf-item"><span class="pf-dot"></span>Real-time approval tracking dashboard</div>
-              <div class="pf-item"><span class="pf-dot"></span>One-tap PDF generation & WhatsApp sharing</div>
-              <div class="pf-item"><span class="pf-dot"></span>Works offline — no internet required</div>
-            </div>
-            <div class="proj-tags">
-              <span>Android</span><span>PDF Generation</span><span>WhatsApp API</span><span>Offline-first</span>
-            </div>
-            <div class="proj-download">
-              <a href="downloads/quotation-pro.apk" download="Quotation-Pro.apk" class="btn-download">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download APK
-              </a>
-              <span class="btn-download-note">Android 5.0+ · Free</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 2: Kumusha Kids -->
-    <div class="project-block alt">
-      <div class="container">
-        <div class="project-inner">
-          <div class="project-info scroll-reveal" style="--sd:0s">
-            <div class="proj-index">02</div>
-            <div class="proj-cat">EdTech · Android App</div>
-            <h3>Kumusha Kids App</h3>
-            <p>An interactive educational app helping Zimbabwean children learn local languages, culture, and heritage through gamified lessons. Designed for ages 3–12, the app works fully offline and features animated characters, audio pronunciation, and achievement rewards.</p>
-            <div class="proj-features">
-              <div class="pf-item"><span class="pf-dot green"></span>Shona language learning with audio & animation</div>
-              <div class="pf-item"><span class="pf-dot green"></span>Gamified progress with rewards & badges</div>
-              <div class="pf-item"><span class="pf-dot green"></span>Alphabet, numbers, colours, stories & more</div>
-              <div class="pf-item"><span class="pf-dot green"></span>Zero-data mode — works without internet</div>
-            </div>
-            <div class="proj-tags">
-              <span>Android</span><span>Shona Language</span><span>Gamification</span><span>Ages 3–12</span>
-            </div>
-          </div>
-          <div class="project-device scroll-reveal" style="--sd:.15s">
-            <div class="proj-phone">
-              <div class="proj-phone-frame">
-                <div class="proj-screen kumusha-screen">
-                  <div class="kms-header">
-                    <div class="kms-title">🌍 Kumusha Kids</div>
-                  </div>
-                  <div class="kms-hero">
-                    <div class="kms-char">👦🏾</div>
-                    <div class="kms-speech">Mhoro! Hello!</div>
-                  </div>
-                  <div class="kms-progress">
-                    <div class="kms-prog-label">Daily Streak 🔥</div>
-                    <div class="kms-prog-bar"><div class="kms-prog-fill" style="width:70%"></div></div>
-                  </div>
-                  <div class="kms-modules">
-                    <div class="kms-mod active">🔤<span>Alphabet</span></div>
-                    <div class="kms-mod">🔢<span>Numbers</span></div>
-                    <div class="kms-mod">🎨<span>Colours</span></div>
-                    <div class="kms-mod">📖<span>Stories</span></div>
-                  </div>
-                  <div class="kms-badge">⭐ Level 4 Explorer</div>
-                </div>
-              </div>
-              <div class="proj-phone-glow green"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 3: School Management -->
-    <div class="project-block">
-      <div class="container">
-        <div class="project-inner">
-          <div class="project-device scroll-reveal" style="--sd:0s">
-            <div class="proj-phone">
-              <div class="proj-phone-frame">
-                <div class="proj-screen school-screen">
-                  <div class="schs-header">
-                    <div class="schs-title">EduManage</div>
-                    <div class="schs-sub">School Dashboard</div>
-                  </div>
-                  <div class="schs-grid">
-                    <div class="schs-stat"><span class="ss-n">342</span><span class="ss-l">Students</span></div>
-                    <div class="schs-stat"><span class="ss-n">18</span><span class="ss-l">Teachers</span></div>
-                    <div class="schs-stat"><span class="ss-n">94%</span><span class="ss-l">Attendance</span></div>
-                    <div class="schs-stat"><span class="ss-n">$12k</span><span class="ss-l">Fees Due</span></div>
-                  </div>
-                  <div class="schs-menu">
-                    <div class="sm-row">📋 <span>Attendance</span><span class="sm-arrow">›</span></div>
-                    <div class="sm-row">📝 <span>Results</span><span class="sm-arrow">›</span></div>
-                    <div class="sm-row">💳 <span>Fee Collection</span><span class="sm-arrow">›</span></div>
-                    <div class="sm-row">📊 <span>Reports</span><span class="sm-arrow">›</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="proj-phone-glow cyan"></div>
-            </div>
-          </div>
-          <div class="project-info scroll-reveal" style="--sd:.15s">
-            <div class="proj-index">03</div>
-            <div class="proj-cat">Education Management · Android App</div>
-            <h3>School Management App</h3>
-            <p>A comprehensive school administration platform built for Zimbabwean schools. Administrators, teachers, and bursars manage their entire institution from one app — students, attendance, results, fee collection, and reports.</p>
-            <div class="proj-features">
-              <div class="pf-item"><span class="pf-dot cyan"></span>Student registration & profile management</div>
-              <div class="pf-item"><span class="pf-dot cyan"></span>Daily attendance tracking per class</div>
-              <div class="pf-item"><span class="pf-dot cyan"></span>Exam results entry & report cards</div>
-              <div class="pf-item"><span class="pf-dot cyan"></span>Fee billing, collection & receipts</div>
-            </div>
-            <div class="proj-tags">
-              <span>Android</span><span>Attendance</span><span>Fee Management</span><span>Report Cards</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 4: McDonvick -->
-    <div class="project-block alt">
-      <div class="container">
-        <div class="project-inner">
-          <div class="project-info scroll-reveal" style="--sd:0s">
-            <div class="proj-index">04</div>
-            <div class="proj-cat">Website Development · Corporate Site</div>
-            <h3>McDonvick Website</h3>
-            <p>A premium corporate website for McDonvick, a Zimbabwean accounting and bookkeeping firm. The site positions them as market leaders, with a bold dark design, service showcasing, and instant WhatsApp contact integration.</p>
-            <div class="proj-features">
-              <div class="pf-item"><span class="pf-dot gold"></span>Fully responsive across all devices</div>
-              <div class="pf-item"><span class="pf-dot gold"></span>WhatsApp direct contact integration</div>
-              <div class="pf-item"><span class="pf-dot gold"></span>Animated service cards & smooth scroll</div>
-              <div class="pf-item"><span class="pf-dot gold"></span>SEO optimised for Zimbabwe searches</div>
-            </div>
-            <div class="proj-tags">
-              <span>HTML/CSS/JS</span><span>Responsive</span><span>WhatsApp CTA</span><span>SEO</span>
-            </div>
-          </div>
-          <div class="project-device scroll-reveal" style="--sd:.15s">
-            <div class="proj-browser">
-              <div class="browser-chrome">
-                <div class="bc-dots"><span></span><span></span><span></span></div>
-                <div class="bc-bar">mcdonvick.co.zw</div>
-              </div>
-              <div class="proj-browser-screen">
-                <div class="pbs-nav">
-                  <div class="pbs-logo">MP McDonvick</div>
-                  <div class="pbs-links">Services · About · Contact</div>
-                </div>
-                <div class="pbs-hero">
-                  <div class="pbs-tag">MOST POPULAR</div>
-                  <div class="pbs-title">Accounting &<br/>Bookkeeping</div>
-                </div>
-                <div class="pbs-card">
-                  <div class="pbs-card-icon">📊</div>
-                  <div class="pbs-card-text">
-                    <div class="pbs-card-title">Management Accounting</div>
-                    <div class="pbs-card-sub">Full-spectrum financial services</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- WHY US -->
-  <section class="why-us" id="why">
-    <div class="container">
-      <div class="section-header centered">
-        <div class="section-kicker scroll-reveal">Why Choose Us</div>
-        <h2 class="section-title scroll-reveal" style="--sd:.1s">Built Different.<br/><em>For Africa.</em></h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card scroll-reveal" style="--sd:0s">
-          <div class="why-number">01</div>
-          <div class="why-icon">🏠</div>
-          <h4>100% Local Team</h4>
-          <p>Our developers, designers, and consultants are all based in Zimbabwe. Fast turnarounds, easy communication, and deep understanding of the local market.</p>
-        </div>
-        <div class="why-card scroll-reveal" style="--sd:.1s">
-          <div class="why-number">02</div>
-          <div class="why-icon">📡</div>
-          <h4>Built for African Networks</h4>
-          <p>Our apps are engineered to work offline and perform on low-bandwidth connections — critical for businesses operating across Zimbabwe's varied connectivity.</p>
-        </div>
-        <div class="why-card scroll-reveal" style="--sd:.2s">
-          <div class="why-number">03</div>
-          <div class="why-icon">💼</div>
-          <h4>SME-Focused Pricing</h4>
-          <p>Enterprise-quality software at pricing that works for small and medium businesses. We believe great technology should be accessible to every Zimbabwean business.</p>
-        </div>
-        <div class="why-card scroll-reveal" style="--sd:.3s">
-          <div class="why-number">04</div>
-          <div class="why-icon">🛡️</div>
-          <h4>End-to-End Ownership</h4>
-          <p>From idea to launch and beyond — we own the full process. One team, one point of contact, complete accountability for everything we build.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-inner">
-        <div class="about-left scroll-reveal" style="--sd:0s">
-          <div class="about-brand-card">
-            <div class="abc-glow"></div>
-            <div class="abc-logo-wrap">
-              <img src="logo.png" alt="Freshinnov Labs Logo" class="abc-logo-img"/>
-            </div>
-            <div class="abc-country">🇿🇼 Harare, Zimbabwe</div>
-            <div class="abc-stats">
-              <div class="abcs"><span>4+</span>Apps</div>
-              <div class="abcs-div"></div>
-              <div class="abcs"><span>50+</span>Clients</div>
-              <div class="abcs-div"></div>
-              <div class="abcs"><span>2022</span>Founded</div>
-            </div>
-          </div>
-        </div>
-        <div class="about-right scroll-reveal" style="--sd:.15s">
-          <div class="section-kicker">About Us</div>
-          <h2 class="section-title">Innovating for<br/><em>Africa's Future</em></h2>
-          <p>Freshinnov Labs (Private) Limited is a Zimbabwean technology company dedicated to building practical, powerful software solutions for businesses and communities. We believe that great technology should be accessible to every business — not just large corporations.</p>
-          <p>Our team of passionate developers, designers, and consultants work closely with clients to understand their unique challenges and deliver solutions that make a real, measurable difference.</p>
-          <p>From mobile apps that work offline in rural areas, to sophisticated school management systems, to professional websites — we build digital tools designed for the African context.</p>
-          <div class="about-values">
-            <div class="av"><span class="av-icon">🌱</span><span>Innovation-first thinking</span></div>
-            <div class="av"><span class="av-icon">🤝</span><span>Long-term client partnerships</span></div>
-            <div class="av"><span class="av-icon">🏗️</span><span>Quality-driven development</span></div>
-            <div class="av"><span class="av-icon">🌍</span><span>Built for the African context</span></div>
-          </div>
-          <a href="#contact" class="btn-primary magnetic" style="margin-top:36px;display:inline-flex">
-            <span>Work With Us</span>
-            <div class="btn-shine"></div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-header centered">
-        <div class="section-kicker scroll-reveal">Contact</div>
-        <h2 class="section-title scroll-reveal" style="--sd:.1s">Let's Build<br/><em>Something Great</em></h2>
-        <p class="section-sub scroll-reveal" style="--sd:.2s">Have an idea? We want to hear it. Tell us about your project and we'll respond within 24 hours.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-left scroll-reveal" style="--sd:0s">
-          <div class="cinfo-card">
-            <h3>Get In Touch</h3>
-            <div class="cinfo-items">
-              <a href="tel:+263775364959" class="cinfo-item">
-                <div class="ci-ico">📱</div>
-                <div>
-                  <span class="ci-label">Phone / WhatsApp</span>
-                  <span class="ci-value">+263 77 536 4959</span>
-                </div>
-              </a>
-              <a href="mailto:freshinnovlabs@gmail.com" class="cinfo-item">
-                <div class="ci-ico">✉️</div>
-                <div>
-                  <span class="ci-label">Email</span>
-                  <span class="ci-value">freshinnovlabs@gmail.com</span>
-                </div>
-              </a>
-              <div class="cinfo-item">
-                <div class="ci-ico">📍</div>
-                <div>
-                  <span class="ci-label">Location</span>
-                  <span class="ci-value">Harare, Zimbabwe</span>
-                </div>
-              </div>
-              <div class="cinfo-item">
-                <div class="ci-ico">🕐</div>
-                <div>
-                  <span class="ci-label">Working Hours</span>
-                  <span class="ci-value">Mon–Fri · 8am–5pm CAT</span>
-                </div>
-              </div>
-            </div>
-            <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="whatsapp-btn">
-              <svg viewBox="0 0 24 24" width="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              Message on WhatsApp
+          <div class="hero-actions" aria-label="Primary actions">
+            <button class="button button-primary" type="button" data-open-lead>
+              <span class="button-dot" aria-hidden="true"></span>
+              <span>Get Website - $50 Once Off</span>
+            </button>
+            <a class="button button-secondary" href="downloads/quotation-pro.apk" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>
+              <span>Download QuotePro</span>
+            </a>
+            <a class="button button-ghost" href="https://wa.me/263775364959" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.81 7.05L4 20l1.48-4.02A8 8 0 1 1 20 11.5Z"/><path d="M9 9.5c.2 2.3 2.2 4.3 4.5 4.5l1.4-1.2 1.6.8"/></svg>
+              <span>WhatsApp Us</span>
             </a>
           </div>
+
+          <div class="hero-proof" aria-label="Freshinnov service highlights">
+            <span>Mobile friendly</span>
+            <span>WhatsApp ready</span>
+            <span>Zimbabwe focused</span>
+          </div>
         </div>
-        <div class="contact-right scroll-reveal" style="--sd:.15s">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row-2">
-              <div class="fg">
-                <label>Your Name</label>
-                <input type="text" placeholder="Tinashe Moyo" required/>
+
+        <div class="hero-stage" aria-label="Website and QuotePro previews">
+          <div class="hero-card float-card float-one"><span></span>Mobile Friendly</div>
+          <div class="hero-card float-card float-two"><span></span>WhatsApp Integration</div>
+          <div class="hero-card float-card float-three"><span></span>Zimbabwe Focused</div>
+          <div class="hero-card float-card float-four"><span></span>Business Solutions</div>
+
+          <div class="laptop">
+            <div class="laptop-screen browser-frame">
+              <div class="browser-top" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <small>fresh website preview</small>
               </div>
-              <div class="fg">
-                <label>Email Address</label>
-                <input type="email" placeholder="tinashe@company.co.zw" required/>
-              </div>
+              <img src="assets/portfolio/watpac.jpg" alt="WATPAC website preview shown in a laptop mockup" width="1280" height="720" fetchpriority="high"/>
             </div>
-            <div class="form-row-2">
-              <div class="fg">
-                <label>Phone / WhatsApp</label>
-                <input type="tel" placeholder="+263 77 ..."/>
+            <div class="laptop-base" aria-hidden="true"></div>
+          </div>
+
+          <div class="phone phone-hero" aria-label="QuotePro phone mockup">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="quote-screen">
+              <div class="quote-bar">
+                <strong>QuotePro</strong>
+                <span>ZW</span>
               </div>
-              <div class="fg">
-                <label>Service Needed</label>
-                <select>
-                  <option>Mobile App Development</option>
-                  <option>Website Development</option>
-                  <option>Custom Software</option>
-                  <option>UI/UX Design</option>
-                  <option>IT Consulting</option>
-                  <option>Cloud & Hosting</option>
-                  <option>Something else</option>
-                </select>
+              <div class="quote-summary">
+                <small>Quote total</small>
+                <strong>$486.00</strong>
+                <em>Ready to send</em>
               </div>
+              <div class="quote-row">
+                <span>Quotation</span>
+                <strong>#QP-204</strong>
+              </div>
+              <div class="quote-row">
+                <span>Invoice</span>
+                <strong>Paid</strong>
+              </div>
+              <div class="quote-row">
+                <span>Receipt</span>
+                <strong>PDF</strong>
+              </div>
+              <button type="button">Send fast</button>
             </div>
-            <div class="fg">
-              <label>Tell us about your project</label>
-              <textarea rows="5" placeholder="Describe your idea, business, and what you're hoping to achieve. The more detail, the better!"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust" id="about" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Portfolio proof</p>
+          <h2 id="trust-title">Trusted by Zimbabwe Businesses</h2>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-item">
+            <div class="browser-frame client-window">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>watpac.co.zw</small></div>
+              <img src="assets/portfolio/watpac.jpg" alt="Screenshot of the WATPAC website" width="1280" height="720" loading="lazy" decoding="async"/>
             </div>
-            <button type="submit" class="form-submit magnetic">
-              <span>Send Message</span>
-              <svg viewBox="0 0 16 16" width="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12M10 4l4 4-4 4"/></svg>
-              <div class="btn-shine"></div>
+            <div class="client-tag"><strong>WATPAC</strong><span>watpac.co.zw</span></div>
+          </article>
+
+          <article class="trust-item">
+            <div class="browser-frame client-window">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>mcdonvick.co.zw</small></div>
+              <img src="assets/portfolio/mcdonvick.jpg" alt="Screenshot of the McDonvick website" width="1280" height="720" loading="lazy" decoding="async"/>
+            </div>
+            <div class="client-tag"><strong>McDonvick</strong><span>mcdonvick.co.zw</span></div>
+          </article>
+
+          <article class="trust-item">
+            <div class="browser-frame client-window">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>beverlyhillsgroupofschools.co.zw</small></div>
+              <img src="assets/portfolio/beverly-hills-schools.jpg" alt="Screenshot of the Beverly Hills Group of Schools website" width="1280" height="720" loading="lazy" decoding="async"/>
+            </div>
+            <div class="client-tag"><strong>Beverly Hills Group of Schools</strong><span>beverlyhillsgroupofschools.co.zw</span></div>
+          </article>
+
+          <article class="trust-item">
+            <div class="browser-frame client-window">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>surgeaccounting.co.zw</small></div>
+              <img src="assets/portfolio/surge-accounting.jpg" alt="Screenshot of the Surge Accounting website" width="1280" height="720" loading="lazy" decoding="async"/>
+            </div>
+            <div class="client-tag"><strong>Surge Accounting</strong><span>surgeaccounting.co.zw</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="work" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading section-heading-wide">
+          <p class="eyebrow">Featured projects</p>
+          <h2 id="projects-title">Websites built to look credible and convert enquiries</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-preview browser-frame">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>WATPAC Zimbabwe</small></div>
+              <img src="assets/portfolio/watpac.jpg" alt="WATPAC Zimbabwe corporate website screenshot" width="1280" height="720" loading="lazy" decoding="async"/>
+            </div>
+            <div class="project-body">
+              <p>Corporate website</p>
+              <h3>WATPAC Zimbabwe</h3>
+              <ul>
+                <li>Responsive design</li>
+                <li>Service showcase</li>
+                <li>Contact integration</li>
+                <li>Professional corporate UI</li>
+              </ul>
+              <a class="text-link" href="https://watpac.co.zw/" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview browser-frame">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>McDonvick</small></div>
+              <img src="assets/portfolio/mcdonvick.jpg" alt="McDonvick accounting website screenshot" width="1280" height="720" loading="lazy" decoding="async"/>
+            </div>
+            <div class="project-body">
+              <p>Accounting website</p>
+              <h3>McDonvick</h3>
+              <ul>
+                <li>Accounting services presentation</li>
+                <li>WhatsApp integration</li>
+                <li>Mobile responsive</li>
+                <li>SEO ready</li>
+              </ul>
+              <a class="text-link" href="https://mcdonvick.co.zw/" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview browser-frame">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>Beverly Hills Group of Schools</small></div>
+              <img src="assets/portfolio/beverly-hills-schools.jpg" alt="Beverly Hills Group of Schools website screenshot" width="1280" height="720" loading="lazy" decoding="async"/>
+            </div>
+            <div class="project-body">
+              <p>School website</p>
+              <h3>Beverly Hills Group of Schools</h3>
+              <ul>
+                <li>Admissions</li>
+                <li>Gallery</li>
+                <li>School information portal</li>
+                <li>Contact pages</li>
+              </ul>
+              <a class="text-link" href="https://beverlyhillsgroupofschools.co.zw/" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview browser-frame">
+              <div class="browser-top" aria-hidden="true"><span></span><span></span><span></span><small>Surge Accounting</small></div>
+              <img src="assets/portfolio/surge-accounting.jpg" alt="Surge Accounting business website screenshot" width="1280" height="720" loading="lazy" decoding="async"/>
+            </div>
+            <div class="project-body">
+              <p>Business website</p>
+              <h3>Surge Accounting</h3>
+              <ul>
+                <li>Corporate branding</li>
+                <li>Responsive design</li>
+                <li>Contact forms</li>
+                <li>Business service pages</li>
+              </ul>
+              <a class="text-link" href="https://surgeaccounting.co.zw/" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="services" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Clear entry offers</p>
+          <h2 id="pricing-title">Affordable Digital Solutions</h2>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card price-featured">
+            <div class="price-top">
+              <p>Website Package</p>
+              <strong>$50 <span>Once Off</span></strong>
+            </div>
+            <ul class="feature-list">
+              <li>Mobile friendly website</li>
+              <li>Home page</li>
+              <li>Services page</li>
+              <li>Gallery page</li>
+              <li>Contact page</li>
+              <li>WhatsApp integration</li>
+              <li>Google Business setup</li>
+              <li class="feature-no">No monthly fees</li>
+            </ul>
+            <div class="fit-list">
+              <span>Builders</span>
+              <span>Schools</span>
+              <span>Borehole companies</span>
+              <span>Plumbers</span>
+              <span>Shops</span>
+              <span>Small businesses</span>
+            </div>
+            <button class="button button-primary" type="button" data-open-lead>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              <span>Get Website</span>
             </button>
-            <div class="form-success" id="formSuccess">
-              <span>🎉</span>
-              <div>
-                <strong>Message sent!</strong>
-                <span>We'll be in touch within 24 hours.</span>
-              </div>
+          </article>
+
+          <article class="price-card price-quotepro">
+            <div class="price-top">
+              <p>QuotePro</p>
+              <strong>$4 <span>Once Off</span></strong>
+              <h3>Zimbabwe's Mobile Quotation App</h3>
+              <small>By Zimbabweans, For Zimbabweans</small>
             </div>
-          </form>
+            <ul class="feature-list compact-list">
+              <li>Quotations</li>
+              <li>Invoices</li>
+              <li>Receipts</li>
+              <li>Delivery notes</li>
+              <li>Works on phone</li>
+              <li>Send quotations fast</li>
+            </ul>
+            <a class="button button-secondary" href="downloads/quotation-pro.apk" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>
+              <span>Download QuotePro</span>
+            </a>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="quotepro" id="quotepro" aria-labelledby="quotepro-title">
+      <div class="container quotepro-grid">
+        <div class="quotepro-copy">
+          <p class="eyebrow">QuotePro for Zimbabwe</p>
+          <h2 id="quotepro-title">Zimbabwe Leading Quotations Mobile App</h2>
+          <p>Create quotations, invoices, receipts and delivery notes using your phone.</p>
+          <div class="quotepro-features">
+            <span>Choose from many templates</span>
+            <span>Send quotations fast</span>
+            <span>Cheap to use</span>
+            <span>Use anywhere</span>
+            <span>Made for Zimbabwe businesses</span>
+            <span>Small business friendly</span>
+          </div>
+          <a class="button button-primary" href="downloads/quotation-pro.apk" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>
+            <span>Download APK</span>
+          </a>
+        </div>
+
+        <div class="quotepro-phones" aria-label="QuotePro screens">
+          <div class="phone phone-large">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="quote-screen">
+              <div class="quote-bar"><strong>Templates</strong><span>12</span></div>
+              <div class="template-card accent"><strong>Quotation</strong><small>Branded PDF</small></div>
+              <div class="template-card"><strong>Invoice</strong><small>Share on phone</small></div>
+              <div class="template-card"><strong>Receipt</strong><small>Save records</small></div>
+              <button type="button">Create document</button>
+            </div>
+          </div>
+          <div class="phone phone-small">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="quote-screen light-screen">
+              <div class="quote-bar"><strong>Send</strong><span>Fast</span></div>
+              <div class="quote-summary">
+                <small>Client</small>
+                <strong>Moyo Builders</strong>
+                <em>WhatsApp ready</em>
+              </div>
+              <div class="quote-row"><span>Delivery note</span><strong>Done</strong></div>
+              <div class="quote-row"><span>Receipt</span><strong>Saved</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries" aria-labelledby="industries-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Built for local work</p>
+          <h2 id="industries-title">Industries We Serve</h2>
+        </div>
+        <div class="industry-grid">
+          <article><span aria-hidden="true">🏫</span><strong>Schools</strong></article>
+          <article><span aria-hidden="true">🔧</span><strong>Plumbers</strong></article>
+          <article><span aria-hidden="true">⚡</span><strong>Electricians</strong></article>
+          <article><span aria-hidden="true">🧱</span><strong>Builders</strong></article>
+          <article><span aria-hidden="true">🚰</span><strong>Borehole Companies</strong></article>
+          <article><span aria-hidden="true">🛒</span><strong>Shops</strong></article>
+          <article><span aria-hidden="true">💼</span><strong>SMEs</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container testimonial-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Client feedback</p>
+          <h2 id="testimonials-title">Fast tools for businesses that need momentum</h2>
+        </div>
+        <div class="testimonial-card" aria-live="polite">
+          <blockquote class="testimonial-slide is-active">
+            <p>"QuotePro helped me send quotations faster."</p>
+            <footer>Builder, Harare</footer>
+          </blockquote>
+          <blockquote class="testimonial-slide">
+            <p>"Our school now manages information better."</p>
+            <footer>School Administrator</footer>
+          </blockquote>
+          <blockquote class="testimonial-slide">
+            <p>"We got our website quickly and professionally."</p>
+            <footer>Business Owner</footer>
+          </blockquote>
+          <div class="carousel-controls">
+            <button type="button" data-testimonial-prev aria-label="Previous testimonial">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18 9 12l6-6"/></svg>
+            </button>
+            <div class="carousel-dots" aria-label="Testimonial slides">
+              <button class="is-active" type="button" data-testimonial-dot="0" aria-label="Show testimonial 1"></button>
+              <button type="button" data-testimonial-dot="1" aria-label="Show testimonial 2"></button>
+              <button type="button" data-testimonial-dot="2" aria-label="Show testimonial 3"></button>
+            </div>
+            <button type="button" data-testimonial-next aria-label="Next testimonial">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Freshinnov Labs impact">
+      <div class="container stats-grid">
+        <article><strong>4+</strong><span>Client Websites</span></article>
+        <article><strong>4+</strong><span>Apps Delivered</span></article>
+        <article><strong>50+</strong><span>Businesses Served</span></article>
+        <article><strong>ZW</strong><span>Zimbabwe Focused</span></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-cta" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <p class="eyebrow">Launch your next enquiry channel</p>
+        <h2>GET YOUR BUSINESS ONLINE TODAY</h2>
+        <div class="footer-offer">
+          <span>Professional Websites</span>
+          <span>Google Setup</span>
+          <span>WhatsApp Integration</span>
+        </div>
+        <strong class="footer-price">ONLY $50 ONCE OFF</strong>
+      </div>
+      <div class="footer-actions">
+        <a class="button button-ghost" href="https://wa.me/263775364959" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.81 7.05L4 20l1.48-4.02A8 8 0 1 1 20 11.5Z"/><path d="M9 9.5c.2 2.3 2.2 4.3 4.5 4.5l1.4-1.2 1.6.8"/></svg>
+          <span>WhatsApp Us</span>
+        </a>
+        <button class="button button-primary" type="button" data-open-lead>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          <span>Get Website</span>
+        </button>
+        <a class="button button-secondary" href="downloads/quotation-pro.apk" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>
+          <span>Download QuotePro</span>
+        </a>
       </div>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-top-line"></div>
-    <div class="container">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <img src="logo.png" alt="Freshinnov Labs" class="footer-logo-img"/>
-          </div>
-          <p>Building world-class digital tools for African businesses. Proudly Zimbabwean. 🇿🇼</p>
-          <div class="footer-contact-quick">
-            <a href="tel:+263775364959">+263 77 536 4959</a>
-            <a href="mailto:freshinnovlabs@gmail.com">freshinnovlabs@gmail.com</a>
-          </div>
-        </div>
-        <div class="footer-links-grid">
-          <div class="fl-col">
-            <h5>Services</h5>
-            <a href="#services">Mobile App Development</a>
-            <a href="#services">Website Development</a>
-            <a href="#services">Custom Software</a>
-            <a href="#services">UI/UX Design</a>
-            <a href="#services">IT Consulting</a>
-            <a href="#services">Cloud & Hosting</a>
-          </div>
-          <div class="fl-col">
-            <h5>Our Apps</h5>
-            <a href="apps.html">All Apps</a>
-            <a href="apps/quotepro.html">QuotePro</a>
-            <a href="apps/shop-sales.html">Shop Sales App</a>
-            <a href="apps/wifi-ticketing.html">WiFi Ticketing</a>
-            <a href="apps/school-management.html">School Management</a>
-          </div>
-          <div class="fl-col">
-            <h5>Company</h5>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-            <a href="https://wa.me/263775364959" target="_blank">WhatsApp</a>
-            <a href="mailto:freshinnovlabs@gmail.com">Email Us</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Freshinnov Labs (Pvt) Ltd · All rights reserved</span>
-        <span>Made with ❤️ in Zimbabwe</span>
+    <div class="container footer-bottom">
+      <a class="brand footer-brand" href="#home" aria-label="Freshinnov Labs home">
+        <span class="brand-mark"><img src="assets/freshinnov-logo.jpg" alt="" width="96" height="54" loading="lazy" decoding="async"/></span>
+        <span class="brand-copy"><strong>Freshinnov Labs</strong><span>Harare, Zimbabwe</span></span>
+      </a>
+      <div class="footer-links">
+        <a href="tel:+263775364959">+263 77 536 4959</a>
+        <a href="mailto:freshinnovlabs@gmail.com">freshinnovlabs@gmail.com</a>
+        <span>&copy; 2026 Freshinnov Labs</span>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
-    <svg viewBox="0 0 24 24" width="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span class="wa-float-text">Chat With Us on WhatsApp</span>
+  <a class="whatsapp-float" href="https://wa.me/263775364959" target="_blank" rel="noopener" aria-label="Chat with Freshinnov Labs on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.81 7.05L4 20l1.48-4.02A8 8 0 1 1 20 11.5Z"/><path d="M9 9.5c.2 2.3 2.2 4.3 4.5 4.5l1.4-1.2 1.6.8"/></svg>
+    <span>WhatsApp</span>
   </a>
 
-  <script>
-/* ================================================================
-   FRESHINNOV LABS — main.js
-   Particles · Magnetic buttons · Custom cursor · Scroll animations
-   ================================================================ */
-
-(function () {
-  'use strict';
-
-  /* ---- CUSTOM CURSOR ---- */
-  const cursor = document.getElementById('cursor');
-  const follower = document.getElementById('cursor-follower');
-  let mouseX = 0, mouseY = 0;
-  let followerX = 0, followerY = 0;
-
-  if (cursor && follower) {
-    document.addEventListener('mousemove', e => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursor.style.left = mouseX + 'px';
-      cursor.style.top = mouseY + 'px';
-    });
-
-    const tickFollower = () => {
-      followerX += (mouseX - followerX) * 0.14;
-      followerY += (mouseY - followerY) * 0.14;
-      follower.style.left = followerX + 'px';
-      follower.style.top = followerY + 'px';
-      requestAnimationFrame(tickFollower);
-    };
-    tickFollower();
-
-    document.querySelectorAll('a, button, .nav-cta, .svc-card, .why-card').forEach(el => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-  }
-
-  /* ---- PARTICLE CANVAS ---- */
-  const canvas = document.getElementById('particle-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let W, H, particles = [], animId;
-
-    const resize = () => {
-      W = canvas.width = canvas.offsetWidth;
-      H = canvas.height = canvas.offsetHeight;
-    };
-
-    class Particle {
-      constructor() { this.reset(); }
-      reset() {
-        this.x = Math.random() * W;
-        this.y = Math.random() * H;
-        this.vx = (Math.random() - .5) * .4;
-        this.vy = (Math.random() - .5) * .4;
-        this.r = Math.random() * 1.5 + .5;
-        this.alpha = Math.random() * .4 + .1;
-        this.color = Math.random() > .7 ? [16,232,122] : Math.random() > .5 ? [56,189,248] : [255,255,255];
-      }
-      update() {
-        this.x += this.vx; this.y += this.vy;
-        if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${this.color.join(',')},${this.alpha})`;
-        ctx.fill();
-      }
-    }
-
-    const connect = () => {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(255,255,255,${.06 * (1 - dist / 120)})`;
-            ctx.lineWidth = .5;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-    };
-
-    const initParticles = () => {
-      particles = [];
-      const count = Math.min(Math.floor((W * H) / 14000), 80);
-      for (let i = 0; i < count; i++) particles.push(new Particle());
-    };
-
-    const animate = () => {
-      ctx.clearRect(0, 0, W, H);
-      particles.forEach(p => { p.update(); p.draw(); });
-      connect();
-      animId = requestAnimationFrame(animate);
-    };
-
-    const init = () => { resize(); initParticles(); if (animId) cancelAnimationFrame(animId); animate(); };
-    init();
-    window.addEventListener('resize', init);
-  }
-
-  /* ---- MAGNETIC BUTTONS ---- */
-  document.querySelectorAll('.magnetic').forEach(el => {
-    el.addEventListener('mousemove', e => {
-      const rect = el.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = (e.clientX - cx) * .35;
-      const dy = (e.clientY - cy) * .35;
-      el.style.transform = `translate(${dx}px, ${dy}px)`;
-    });
-    el.addEventListener('mouseleave', () => {
-      el.style.transform = '';
-    });
-  });
-
-  /* ---- NAVBAR SCROLL ---- */
-  const navbar = document.getElementById('navbar');
-  const handleNavScroll = () => {
-    if (window.scrollY > 30) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-  };
-  window.addEventListener('scroll', handleNavScroll, { passive: true });
-  handleNavScroll();
-
-  /* ---- HAMBURGER MENU ---- */
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-  let menuOpen = false;
-
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => {
-      menuOpen = !menuOpen;
-      mobileMenu.classList.toggle('open', menuOpen);
-      const [s1, s2] = hamburger.querySelectorAll('span');
-      if (menuOpen) {
-        s1.style.transform = 'translateY(7px) rotate(45deg)';
-        s2.style.transform = 'translateY(-7px) rotate(-45deg)';
-      } else {
-        s1.style.transform = '';
-        s2.style.transform = '';
-      }
-    });
-    document.querySelectorAll('.mob-link, .mob-cta').forEach(l => {
-      l.addEventListener('click', () => {
-        menuOpen = false;
-        mobileMenu.classList.remove('open');
-        hamburger.querySelectorAll('span').forEach(s => s.style.transform = '');
-      });
-    });
-  }
-
-  /* ---- SCROLL REVEAL (IntersectionObserver) ---- */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.scroll-reveal, .reveal-up, .reveal-line').forEach(el => {
-    revealObserver.observe(el);
-  });
-
-  // Trigger hero elements immediately
-  setTimeout(() => {
-    document.querySelectorAll('.hero .reveal-up, .hero .reveal-line').forEach(el => el.classList.add('in'));
-  }, 100);
-
-  /* ---- COUNTER ANIMATION ---- */
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.count);
-        let current = 0;
-        const duration = 1800;
-        const stepTime = 16;
-        const steps = duration / stepTime;
-        const increment = target / steps;
-        const timer = setInterval(() => {
-          current = Math.min(current + increment, target);
-          el.textContent = Math.floor(current);
-          if (current >= target) { el.textContent = target; clearInterval(timer); }
-        }, stepTime);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.8 });
-
-  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
-
-  /* ---- HERO DEVICE 3D TILT ---- */
-  const heroDevice = document.getElementById('hero-device');
-  if (heroDevice) {
-    const hero = document.querySelector('.hero');
-    hero.addEventListener('mousemove', e => {
-      const rect = hero.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const rx = (e.clientY - cy) / cy * -8;
-      const ry = (e.clientX - cx) / cx * 10;
-      heroDevice.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-    });
-    hero.addEventListener('mouseleave', () => {
-      heroDevice.style.transform = 'perspective(800px) rotateX(0) rotateY(0)';
-    });
-  }
-
-  /* ---- SMOOTH SCROLL ---- */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href');
-      if (id === '#') return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 72;
-      window.scrollTo({ top, behavior: 'smooth' });
-    });
-  });
-
-  /* ---- CONTACT FORM ---- */
-  const form = document.getElementById('contactForm');
-  const successEl = document.getElementById('formSuccess');
-
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const btn = form.querySelector('.form-submit');
-      const originalHTML = btn.innerHTML;
-      btn.innerHTML = '<span>Sending…</span>';
-      btn.disabled = true;
-      btn.style.opacity = '.75';
-
-      // Simulate submission (replace with real endpoint if desired)
-      setTimeout(() => {
-        btn.innerHTML = originalHTML;
-        btn.disabled = false;
-        btn.style.opacity = '';
-        if (successEl) {
-          successEl.style.display = 'flex';
-          form.reset();
-          setTimeout(() => { successEl.style.display = 'none'; }, 6000);
-        }
-      }, 1400);
-    });
-  }
-
-  /* ---- ACTIVE NAV LINK ON SCROLL ---- */
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.style.color = '');
-        const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (active) active.style.color = 'var(--green)';
-      }
-    });
-  }, { threshold: .5 });
-
-  sections.forEach(s => sectionObserver.observe(s));
-
-  /* ---- SERVICE CARD HOVER GLOW ---- */
-  document.querySelectorAll('.svc-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(16,232,122,.06), var(--surface-2) 60%)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.background = '';
-    });
-  });
-
-})();
-
-</script>
+  <dialog class="lead-dialog" id="lead-dialog" aria-labelledby="lead-title">
+    <form class="lead-form" id="lead-form">
+      <button class="dialog-close" type="button" data-close-lead aria-label="Close quote form">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"/></svg>
+      </button>
+      <p class="eyebrow">Fast website quote</p>
+      <h2 id="lead-title">Need a Website?</h2>
+      <label>
+        <span>Name</span>
+        <input name="name" type="text" autocomplete="name" required placeholder="Your name"/>
+      </label>
+      <label>
+        <span>Business Type</span>
+        <input name="business" type="text" required placeholder="School, builder, shop..."/>
+      </label>
+      <label>
+        <span>Phone Number</span>
+        <input name="phone" type="tel" autocomplete="tel" required placeholder="+263 ..."/>
+      </label>
+      <button class="button button-primary" type="submit">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.81 7.05L4 20l1.48-4.02A8 8 0 1 1 20 11.5Z"/><path d="M9 9.5c.2 2.3 2.2 4.3 4.5 4.5l1.4-1.2 1.6.8"/></svg>
+        <span>Request Quote via WhatsApp</span>
+      </button>
+    </form>
+  </dialog>
 </body>
 </html>
