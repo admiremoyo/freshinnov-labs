@@ -902,6 +902,13 @@ footer[id] {
   width: 100%;
 }
 
+.quotepro-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
 .quotepro-phones {
   align-items: end;
   display: flex;
