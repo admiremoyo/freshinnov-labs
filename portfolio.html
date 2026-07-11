@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Portfolio — Websites &amp; Apps Built in Zimbabwe | Freshinnov Labs</title>
+  <meta name="description" content="See the websites and business apps we've built for clients across Zimbabwe — WATPAC, McDonvick Investments, Beverly Hills Group of Schools, and more."/>
+  <meta name="keywords" content="website portfolio Zimbabwe, web design portfolio Harare, business apps portfolio Zimbabwe, Freshinnov Labs portfolio"/>
+  <meta property="og:title" content="Our Portfolio — Freshinnov Labs"/>
+  <meta property="og:description" content="Real websites and apps built for real businesses across Zimbabwe."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+  /* ---- PORTFOLIO PAGE HERO ---- */
+  .port-hero {
+    padding: 160px 0 100px;
+    position: relative; overflow: hidden;
+    text-align: center;
+  }
+  .port-hero-glow {
+    position: absolute; border-radius: 50%;
+    filter: blur(120px); pointer-events: none; z-index: 0;
+  }
+  .ph-g1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,99,235,.18) 0%, transparent 70%); top: -200px; left: 50%; transform: translateX(-50%); }
+  .ph-g2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(16,232,122,.12) 0%, transparent 70%); bottom: -100px; right: -100px; }
+  .port-hero .container { position: relative; z-index: 2; }
+  .port-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 6vw, 80px);
+    color: var(--text-1); line-height: 1.05;
+    letter-spacing: -2px; margin-bottom: 22px;
+  }
+  .port-hero h1 em { font-style: italic; color: var(--blue-light); }
+  .port-hero p { font-size: 18px; color: var(--text-2); max-width: 560px; margin: 0 auto 40px; line-height: 1.75; }
+  .port-hero-stats {
+    display: flex; align-items: center; justify-content: center; gap: 36px;
+    flex-wrap: wrap; margin-top: 48px; padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .ph-stat { text-align: center; }
+  .ph-stat-num { font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--text-1); line-height: 1; }
+  .ph-stat-num span { color: var(--green); }
+  .ph-stat-label { font-size: 12px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: .5px; margin-top: 4px; }
+  .ph-stat-div { width: 1px; height: 48px; background: var(--border-hi); }
+
+  /* ---- CATEGORY FILTER ---- */
+  .port-filter {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; flex-wrap: wrap; margin-bottom: 56px;
+  }
+  .filter-btn {
+    font-family: var(--font-body); font-size: 13px; font-weight: 600;
+    padding: 8px 20px; border-radius: 100px; cursor: pointer;
+    border: 1.5px solid var(--border-hi); background: transparent;
+    color: var(--text-2); transition: all .25s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    border-color: var(--green); color: var(--green);
+    background: var(--green-dim);
+  }
+
+  /* ---- PORTFOLIO CATEGORY SECTION ---- */
+  .port-category { margin-bottom: 80px; }
+  .port-cat-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 36px;
+  }
+  .port-cat-label {
+    font-size: 11px; font-weight: 800; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--green);
+    background: var(--green-dim); border: 1px solid rgba(16,232,122,.2);
+    padding: 5px 14px; border-radius: 100px; white-space: nowrap;
+  }
+  .port-cat-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ---- PORTFOLIO CARDS ---- */
+  .port-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .port-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; max-width: 860px; }
+
+  .port-card-v2 {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); overflow: hidden;
+    transition: transform .4s var(--ease), box-shadow .4s, border-color .3s;
+    display: flex; flex-direction: column;
+  }
+  .port-card-v2:hover { transform: translateY(-6px); box-shadow: 0 24px 56px rgba(0,0,0,.45); border-color: var(--border-hi); }
+
+  .port-mock { overflow: hidden; }
+  .port-mock .browser-chrome { border-radius: 0; }
+  .port-mock-screen { padding: 20px; min-height: 190px; }
+
+  .port-body { padding: 24px 28px 28px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .port-body-cat { font-size: 11px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 2px; }
+  .port-body-name { font-family: var(--font-display); font-size: 22px; color: var(--text-1); line-height: 1.2; }
+  .port-body-desc { font-size: 14px; color: var(--text-2); line-height: 1.7; flex: 1; }
+  .port-body-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .port-body-tag { font-size: 11px; font-weight: 600; color: var(--text-3); background: var(--surface-2); border: 1px solid var(--border); padding: 3px 10px; border-radius: 100px; }
+  .port-body-actions { display: flex; gap: 10px; align-items: center; margin-top: 4px; }
+  .port-body-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 700; color: var(--green);
+    padding: 8px 18px; border: 1.5px solid rgba(16,232,122,.3);
+    border-radius: 100px; transition: background .3s, border-color .3s;
+    text-decoration: none;
+  }
+  .port-body-btn:hover { background: var(--green-dim); border-color: var(--green); }
+  .port-body-btn-ghost { color: var(--text-3); border-color: var(--border-hi); font-size: 13px; font-weight: 600; }
+  .port-body-btn-ghost:hover { color: var(--text-1); background: rgba(255,255,255,.05); border-color: var(--border-hi); }
+
+  /* ---- APP CARD VARIANT ---- */
+  .port-app-mock {
+    padding: 28px 24px; display: flex; align-items: center; gap: 20px;
+  }
+  .port-app-icon {
+    width: 64px; height: 64px; border-radius: 18px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 28px;
+  }
+  .port-app-icon.blue  { background: linear-gradient(135deg,#0d1e6e,#1a3aab); }
+  .port-app-icon.green { background: linear-gradient(135deg,#052e16,#064e33); }
+  .port-app-icon.cyan  { background: linear-gradient(135deg,#0c1445,#1e3a7a); }
+  .port-app-icon.purple{ background: linear-gradient(135deg,#1a0533,#3b0764); }
+  .port-app-title { font-size: 16px; font-weight: 800; color: var(--text-1); margin-bottom: 4px; }
+  .port-app-sub   { font-size: 13px; color: var(--text-2); }
+
+  /* ---- CTA BANNER ---- */
+  .port-cta {
+    padding: 100px 0;
+    background: var(--surface); border-top: 1px solid var(--border);
+  }
+  .port-cta-inner {
+    text-align: center;
+  }
+  .port-cta h2 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 4.5vw, 60px);
+    color: var(--text-1); line-height: 1.1;
+    letter-spacing: -1.5px; margin-bottom: 18px;
+  }
+  .port-cta h2 em { font-style: italic; color: var(--blue-light); }
+  .port-cta p { font-size: 17px; color: var(--text-2); max-width: 500px; margin: 0 auto 40px; line-height: 1.75; }
+  .port-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 1024px) {
+    .port-grid-3 { grid-template-columns: repeat(2,1fr); }
+    .port-grid-2 { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+  }
+  @media (max-width: 768px) {
+    .port-grid-3 { grid-template-columns: 1fr; }
+    .port-grid-2 { max-width: 100%; }
+    .port-hero h1 { letter-spacing: -1px; }
+    .port-hero-stats { gap: 20px; }
+    .ph-stat-div { display: none; }
+  }
+  @media (max-width: 480px) {
+    .port-body { padding: 20px; }
+    .port-mock-screen { min-height: 160px; }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Freshinnov Labs" class="nav-logo-img"/>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="apps.html" class="nav-link">Apps</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="index.html#pricing" class="nav-link">Pricing</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#contact" class="nav-cta magnetic">
+          <span>Contact</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mob-link">Home</a>
+      <a href="index.html#services" class="mob-link">Services</a>
+      <a href="apps.html" class="mob-link">Apps</a>
+      <a href="portfolio.html" class="mob-link">Portfolio</a>
+      <a href="index.html#pricing" class="mob-link">Pricing</a>
+      <a href="index.html#about" class="mob-link">About</a>
+      <a href="index.html#contact" class="mob-link">Contact</a>
+      <a href="https://wa.me/263775364959" target="_blank" class="mob-cta">💬 WhatsApp Us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="port-hero">
+    <div class="port-hero-glow ph-g1"></div>
+    <div class="port-hero-glow ph-g2"></div>
+    <div class="container">
+      <div class="section-kicker reveal-up" style="--delay:.1s">Our Portfolio</div>
+      <h1 class="reveal-up" style="--delay:.2s">
+        Real Work.<br/><em>Real Results.</em>
+      </h1>
+      <p class="reveal-up" style="--delay:.35s">
+        From corporate websites to school portals to business apps — every project we ship is built to grow with you.
+      </p>
+      <div class="hero-actions reveal-up" style="--delay:.5s" style="justify-content:center">
+        <a href="index.html#contact" class="btn-primary magnetic">
+          <span>Start Your Project</span>
+          <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          <div class="btn-shine"></div>
+        </a>
+        <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="btn-ghost">
+          <svg viewBox="0 0 24 24" width="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <div class="port-hero-stats reveal-up" style="--delay:.65s">
+        <div class="ph-stat">
+          <div class="ph-stat-num">50<span>+</span></div>
+          <div class="ph-stat-label">Projects Delivered</div>
+        </div>
+        <div class="ph-stat-div"></div>
+        <div class="ph-stat">
+          <div class="ph-stat-num">4<span>+</span></div>
+          <div class="ph-stat-label">Business Apps</div>
+        </div>
+        <div class="ph-stat-div"></div>
+        <div class="ph-stat">
+          <div class="ph-stat-num">3<span>+</span></div>
+          <div class="ph-stat-label">Industries Served</div>
+        </div>
+        <div class="ph-stat-div"></div>
+        <div class="ph-stat">
+          <div class="ph-stat-num">100<span>%</span></div>
+          <div class="ph-stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO CONTENT -->
+  <section style="padding: 80px 0 40px;">
+    <div class="container">
+
+      <!-- CATEGORY: Business Websites -->
+      <div class="port-category" id="business">
+        <div class="port-cat-header">
+          <span class="port-cat-label">Business</span>
+          <div class="port-cat-line"></div>
+        </div>
+        <div class="port-grid-3">
+
+          <!-- WATPAC -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:0s">
+            <div class="port-mock">
+              <div class="browser-chrome">
+                <div class="bc-dots"><span></span><span></span><span></span></div>
+                <div class="bc-bar">watpac.co.zw</div>
+              </div>
+              <div class="port-mock-screen" style="background:#051525">
+                <div class="pbs-nav">
+                  <div class="pbs-logo" style="color:#38bdf8">WATPAC</div>
+                  <div class="pbs-links">Services · Projects · Contact</div>
+                </div>
+                <div class="pbs-hero" style="margin-bottom:12px">
+                  <div class="pbs-tag" style="background:#38bdf8;color:#fff">ZIMBABWE</div>
+                  <div class="pbs-title" style="color:#f0f4ff">Water &amp; Infrastructure<br/>Solutions</div>
+                </div>
+                <div class="pbs-card">
+                  <div class="pbs-card-icon">💧</div>
+                  <div class="pbs-card-text">
+                    <div class="pbs-card-title">Boreholes · Pipelines · Treatment</div>
+                    <div class="pbs-card-sub">Serving Zimbabwe since 2005</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Corporate Website</div>
+              <div class="port-body-name">WATPAC Zimbabwe</div>
+              <p class="port-body-desc">A professional corporate website for one of Zimbabwe's leading water and infrastructure companies. Bold, modern design showcasing services, projects, and contact options.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">HTML/CSS/JS</span>
+                <span class="port-body-tag">Responsive</span>
+                <span class="port-body-tag">SEO</span>
+                <span class="port-body-tag">WhatsApp CTA</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="https://wa.me/263775364959?text=Hi%2C+I%27d+like+a+website+like+WATPAC" target="_blank" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Get One Like This
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- McDonvick -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:.1s">
+            <div class="port-mock">
+              <div class="browser-chrome">
+                <div class="bc-dots"><span></span><span></span><span></span></div>
+                <div class="bc-bar">mcdonvick.co.zw</div>
+              </div>
+              <div class="port-mock-screen" style="background:#0f172a">
+                <div class="pbs-nav">
+                  <div class="pbs-logo">MP McDonvick</div>
+                  <div class="pbs-links">Services · About · Contact</div>
+                </div>
+                <div class="pbs-hero" style="margin-bottom:12px">
+                  <div class="pbs-tag">MOST POPULAR</div>
+                  <div class="pbs-title">Accounting &amp;<br/>Bookkeeping</div>
+                </div>
+                <div class="pbs-card">
+                  <div class="pbs-card-icon">📊</div>
+                  <div class="pbs-card-text">
+                    <div class="pbs-card-title">Management Accounting</div>
+                    <div class="pbs-card-sub">Full-spectrum financial services</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Corporate Website</div>
+              <div class="port-body-name">McDonvick Investments</div>
+              <p class="port-body-desc">Premium dark-themed corporate site for a Zimbabwean accounting firm. Designed to attract high-value clients, featuring service pages, WhatsApp integration, and SEO for local search.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">HTML/CSS/JS</span>
+                <span class="port-body-tag">Responsive</span>
+                <span class="port-body-tag">WhatsApp CTA</span>
+                <span class="port-body-tag">SEO</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="https://wa.me/263775364959?text=Hi%2C+I%27d+like+a+website+like+McDonvick" target="_blank" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Get One Like This
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Generic Business Site slot -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:.2s">
+            <div class="port-mock">
+              <div class="browser-chrome">
+                <div class="bc-dots"><span></span><span></span><span></span></div>
+                <div class="bc-bar">yourbusiness.co.zw</div>
+              </div>
+              <div class="port-mock-screen" style="background:#070f1e">
+                <div class="pbs-nav">
+                  <div class="pbs-logo" style="color:var(--green)">Your Business</div>
+                  <div class="pbs-links">Home · Services · Contact</div>
+                </div>
+                <div class="pbs-hero" style="margin-bottom:12px">
+                  <div class="pbs-tag" style="background:var(--green);color:#061a0e">YOUR BRAND</div>
+                  <div class="pbs-title" style="color:#f0f4ff">We Build Your<br/>Website Next</div>
+                </div>
+                <div class="pbs-card" style="border: 1px dashed rgba(16,232,122,.3); background: rgba(16,232,122,.04)">
+                  <div class="pbs-card-icon">✨</div>
+                  <div class="pbs-card-text">
+                    <div class="pbs-card-title" style="color:var(--green)">Your project here</div>
+                    <div class="pbs-card-sub">From $150 · Delivered in 5–10 days</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Your Website</div>
+              <div class="port-body-name">Could Be You Next</div>
+              <p class="port-body-desc">We're actively taking on new website projects. Get a professional, fast-loading, mobile-friendly website for your business or organisation — from just $150.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">From $150</span>
+                <span class="port-body-tag">5–10 Days</span>
+                <span class="port-body-tag">Any Industry</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="index.html#contact" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Start Your Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CATEGORY: School Websites -->
+      <div class="port-category" id="school">
+        <div class="port-cat-header">
+          <span class="port-cat-label">School &amp; Education</span>
+          <div class="port-cat-line"></div>
+        </div>
+        <div class="port-grid-2">
+
+          <!-- Beverly Hills -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:0s">
+            <div class="port-mock">
+              <div class="browser-chrome">
+                <div class="bc-dots"><span></span><span></span><span></span></div>
+                <div class="bc-bar">beverlyhillsschools.co.zw</div>
+              </div>
+              <div class="port-mock-screen" style="background:#0d0d20">
+                <div class="pbs-nav">
+                  <div class="pbs-logo" style="color:#f59e0b">Beverly Hills Schools</div>
+                  <div class="pbs-links">About · Academics · Enrol</div>
+                </div>
+                <div class="pbs-hero" style="margin-bottom:12px">
+                  <div class="pbs-tag" style="background:#7c3aed;color:#fff">EXCELLENCE</div>
+                  <div class="pbs-title" style="color:#f0f4ff">Shaping Tomorrow's<br/>Leaders</div>
+                </div>
+                <div class="pbs-card">
+                  <div class="pbs-card-icon">🎓</div>
+                  <div class="pbs-card-text">
+                    <div class="pbs-card-title">Admissions Now Open</div>
+                    <div class="pbs-card-sub">ECD · Primary · Secondary</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">School Website</div>
+              <div class="port-body-name">Beverly Hills Group of Schools</div>
+              <p class="port-body-desc">A modern, elegant school website for Beverly Hills Group of Schools. Parents can explore the curriculum, view fees, and submit enrolment enquiries directly online. Built to boost admissions and communicate the school's values.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">HTML/CSS/JS</span>
+                <span class="port-body-tag">Admissions Form</span>
+                <span class="port-body-tag">SEO</span>
+                <span class="port-body-tag">Mobile-First</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="https://wa.me/263775364959?text=Hi%2C+I%27d+like+a+website+for+my+school" target="_blank" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Get a School Website
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Your school -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:.1s">
+            <div class="port-mock">
+              <div class="browser-chrome">
+                <div class="bc-dots"><span></span><span></span><span></span></div>
+                <div class="bc-bar">yourschool.co.zw</div>
+              </div>
+              <div class="port-mock-screen" style="background:#070f1e">
+                <div class="pbs-nav">
+                  <div class="pbs-logo" style="color:#38bdf8">Your School</div>
+                  <div class="pbs-links">About · Enrol · Contact</div>
+                </div>
+                <div class="pbs-hero" style="margin-bottom:12px">
+                  <div class="pbs-tag" style="background:#38bdf8;color:#fff">EDUCATION</div>
+                  <div class="pbs-title" style="color:#f0f4ff">Your School's<br/>Online Home</div>
+                </div>
+                <div class="pbs-card" style="border: 1px dashed rgba(56,189,248,.3); background: rgba(56,189,248,.04)">
+                  <div class="pbs-card-icon">🏫</div>
+                  <div class="pbs-card-text">
+                    <div class="pbs-card-title" style="color:#38bdf8">Built for schools &amp; colleges</div>
+                    <div class="pbs-card-sub">Admissions · Fee schedules · Gallery</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">School Website</div>
+              <div class="port-body-name">Is Your School Next?</div>
+              <p class="port-body-desc">Every school deserves a professional website that attracts parents and communicates quality. We build beautiful, fast school websites with admissions forms, fee information, gallery sections, and WhatsApp contact — starting from $150.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">From $150</span>
+                <span class="port-body-tag">Primary Schools</span>
+                <span class="port-body-tag">Secondary Schools</span>
+                <span class="port-body-tag">Colleges</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="index.html#contact" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Get a Quote
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CATEGORY: Business Apps -->
+      <div class="port-category" id="apps">
+        <div class="port-cat-header">
+          <span class="port-cat-label">Business Apps</span>
+          <div class="port-cat-line"></div>
+        </div>
+        <div class="port-grid-3">
+
+          <!-- QuotePro -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:0s">
+            <div class="port-app-mock" style="background:linear-gradient(135deg,#0d1e6e,#1a3aab)">
+              <div class="port-app-icon blue">📄</div>
+              <div>
+                <div class="port-app-title">QuotePro</div>
+                <div class="port-app-sub">Quotation &amp; Invoicing App</div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Android App</div>
+              <div class="port-body-name">QuotePro</div>
+              <p class="port-body-desc">Create professional quotations in seconds and send them to customers via WhatsApp or email. Works offline. Used by contractors, consultants, and service providers across Zimbabwe.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">Android</span>
+                <span class="port-body-tag">PDF Generation</span>
+                <span class="port-body-tag">WhatsApp Share</span>
+                <span class="port-body-tag">Offline</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="apps/quotepro.html" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Learn More
+                </a>
+                <a href="downloads/quotation-pro.apk" download="Quotation-Pro.apk" class="port-body-btn port-body-btn-ghost">Download APK</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shop Sales -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:.1s">
+            <div class="port-app-mock" style="background:linear-gradient(135deg,#052e16,#064e33)">
+              <div class="port-app-icon green">🛒</div>
+              <div>
+                <div class="port-app-title">Shop Sales App</div>
+                <div class="port-app-sub">Sales &amp; Expense Tracker</div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Android App</div>
+              <div class="port-body-name">Shop Sales App</div>
+              <p class="port-body-desc">Track daily sales and expenses from your phone. Know your profit every day. Works fully offline — perfect for tuckshops, market stalls, and retail shops anywhere in Zimbabwe.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">Android</span>
+                <span class="port-body-tag">Sales Tracking</span>
+                <span class="port-body-tag">Offline</span>
+                <span class="port-body-tag">Reports</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="apps/shop-sales.html" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- WiFi Ticketing -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:.2s">
+            <div class="port-app-mock" style="background:linear-gradient(135deg,#0c1445,#1e3a7a)">
+              <div class="port-app-icon cyan">📶</div>
+              <div>
+                <div class="port-app-title">WiFi Ticketing</div>
+                <div class="port-app-sub">Voucher Management System</div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Android App</div>
+              <div class="port-body-name">WiFi Ticketing System</div>
+              <p class="port-body-desc">Generate and sell WiFi vouchers for your hotspot business. Set time-based plans, track active vouchers, and manage your internet business from one easy dashboard.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">Android</span>
+                <span class="port-body-tag">Voucher Generation</span>
+                <span class="port-body-tag">Hotspot</span>
+                <span class="port-body-tag">Reports</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="apps/wifi-ticketing.html" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- School Management -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:.3s">
+            <div class="port-app-mock" style="background:linear-gradient(135deg,#1a0533,#3b0764)">
+              <div class="port-app-icon purple">🎓</div>
+              <div>
+                <div class="port-app-title">School Management</div>
+                <div class="port-app-sub">Full School Admin System</div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Android App</div>
+              <div class="port-body-name">School Management System</div>
+              <p class="port-body-desc">Manage students, attendance, results, and fees from one app. Built specifically for Zimbabwean schools — works offline and generates printable reports and report cards.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">Android</span>
+                <span class="port-body-tag">Fee Collection</span>
+                <span class="port-body-tag">Attendance</span>
+                <span class="port-body-tag">Report Cards</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="apps/school-management.html" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom App CTA -->
+          <div class="port-card-v2 scroll-reveal" style="--sd:.4s">
+            <div class="port-app-mock" style="background:linear-gradient(135deg,#0a1628,#112240)">
+              <div class="port-app-icon" style="background:rgba(16,232,122,.15);border:1px solid rgba(16,232,122,.3)">⚡</div>
+              <div>
+                <div class="port-app-title" style="color:var(--green)">Custom App</div>
+                <div class="port-app-sub">Built for your business</div>
+              </div>
+            </div>
+            <div class="port-body">
+              <div class="port-body-cat">Custom Development</div>
+              <div class="port-body-name">Need a Custom App?</div>
+              <p class="port-body-desc">Have a unique business need? We build fully custom Android apps tailored to your exact workflow — invoicing, inventory, HR, delivery, ticketing, and more. Let's discuss your idea.</p>
+              <div class="port-body-tags">
+                <span class="port-body-tag">Android</span>
+                <span class="port-body-tag">Any Industry</span>
+                <span class="port-body-tag">Offline-First</span>
+                <span class="port-body-tag">Custom Design</span>
+              </div>
+              <div class="port-body-actions">
+                <a href="https://wa.me/263775364959?text=Hi%2C+I%27d+like+a+custom+app+built" target="_blank" class="port-body-btn">
+                  <svg viewBox="0 0 16 16" width="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                  Discuss Your Idea
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="port-cta">
+    <div class="container">
+      <div class="port-cta-inner">
+        <div class="section-kicker scroll-reveal">Ready to Start?</div>
+        <h2 class="scroll-reveal" style="--sd:.1s">Let's Build<br/><em>Something Great</em></h2>
+        <p class="scroll-reveal" style="--sd:.2s">Get a professional website from $150 or a business app from $3/month. Tell us about your project and we'll respond within 24 hours.</p>
+        <div class="port-cta-btns scroll-reveal" style="--sd:.3s">
+          <a href="index.html#contact" class="btn-primary magnetic">
+            <span>Start Your Project</span>
+            <svg viewBox="0 0 16 16" width="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            <div class="btn-shine"></div>
+          </a>
+          <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(37,211,102,.4);color:var(--wa)">
+            <svg viewBox="0 0 24 24" width="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+          <a href="index.html#pricing" class="btn-ghost">View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top-line"></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Freshinnov Labs" class="footer-logo-img"/>
+          </div>
+          <p>Building world-class digital tools for African businesses. Proudly Zimbabwean. 🇿🇼</p>
+          <div class="footer-contact-quick">
+            <a href="tel:+263775364959">📱 +263 77 536 4959</a>
+            <a href="mailto:freshinnovlabs@gmail.com">✉️ freshinnovlabs@gmail.com</a>
+            <span>📍 Harare, Zimbabwe</span>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="fl-col">
+            <h5>Services</h5>
+            <a href="index.html#services">Mobile App Development</a>
+            <a href="index.html#services">Website Development</a>
+            <a href="index.html#services">Custom Software</a>
+            <a href="index.html#services">UI/UX Design</a>
+          </div>
+          <div class="fl-col">
+            <h5>Our Apps</h5>
+            <a href="apps.html">All Apps</a>
+            <a href="apps/quotepro.html">QuotePro</a>
+            <a href="apps/shop-sales.html">Shop Sales App</a>
+            <a href="apps/wifi-ticketing.html">WiFi Ticketing</a>
+            <a href="apps/school-management.html">School Management</a>
+          </div>
+          <div class="fl-col">
+            <h5>Quick Links</h5>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="https://wa.me/263775364959" target="_blank">💬 WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Freshinnov Labs (Pvt) Ltd · Harare, Zimbabwe · All rights reserved</span>
+        <span>Made with ❤️ in Zimbabwe 🇿🇼</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/263775364959" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-float-text">Chat With Us on WhatsApp</span>
+  </a>
+
+  <script src="main.js"></script>
+  <script>
+    setTimeout(() => {
+      document.querySelectorAll('.reveal-up, .scroll-reveal').forEach((el, i) => {
+        setTimeout(() => el.classList.add('in'), i * 60);
+      });
+    }, 100);
+  </script>
+</body>
+</html>
