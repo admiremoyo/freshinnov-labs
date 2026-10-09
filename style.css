@@ -819,6 +819,7 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
 .app-card-screen.ss-screen  { background: linear-gradient(135deg,#052e16,#064e33); }
 .app-card-screen.wf-screen  { background: linear-gradient(135deg,#0c1445,#1e3a7a); }
 .app-card-screen.sch-screen { background: linear-gradient(135deg,#1a0533,#3b0764); }
+.app-card-screen.kk-screen  { background: linear-gradient(135deg,#7c2d12,#b45309); }
 
 .acs-header { display: flex; justify-content: space-between; align-items: center; }
 .acs-title  { font-size: 12px; font-weight: 800; color: rgba(255,255,255,.9); }
@@ -886,6 +887,7 @@ body.cursor-hover .cursor-follower { width: 56px; height: 56px; background: rgba
 .app-big-screen.ss-screen  { background: linear-gradient(135deg,#052e16,#064e33); }
 .app-big-screen.wf-screen  { background: linear-gradient(135deg,#0c1445,#1e3a7a); }
 .app-big-screen.sch-screen { background: linear-gradient(135deg,#1a0533,#3b0764); }
+.app-big-screen.kk-screen  { background: linear-gradient(135deg,#7c2d12,#b45309); }
 
 .app-big-badge {
   display: inline-flex; align-items: center; gap: 8px;
